@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdZilla</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+
+    <!-- Style_Css_link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloderFunction()" class="">
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">All Ads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="posts.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">Post your ad</span></a>
+                    </li>
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+
+
+    <!-- Blog Section start -->
+    <section class="blog-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-header text-center mb-50">
+                        <h3 class="section-title mx-auto"><span class="highlight-title">Know</span>ledge based blog</h3>
+                        <p class="cmn-para-text mx-auto mt-20">In today's digital age, classified ads offer a powerful
+                            platform for buying and selling. Adzilla is your go-to destination.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/blog/1.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="content-box">
+                            <ul class="meta">
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-user"></i></span>
+                                    <span>by Admin</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i></span>
+                                    <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i></span>
+                                    <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <div class=" blog-title">
+                                <h5><a href="blog-details.html">Mastering the Art of Classified Ad Success on Adzilla:
+                                        10 Proven Strategies to Maximize Your Results</a></h5>
+                            </div>
+                            <div class="pera-text">
+                                <p>Discover ten proven strategies to make the most of your classified ad postings on
+                                    Adzilla and achieve better results.
+                                </p>
+                            </div>
+                            <a href="blog-details.html" class="cmn-btn mt-30 w-100">read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/blog/2.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="content-box">
+                            <ul class="meta">
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-user"></i></span>
+                                    <span>by Admin</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i></span>
+                                    <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i></span>
+                                    <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <div class=" blog-title">
+                                <h5><a href="blog-details.html">Unlocking the Power of Classified Ads: Your Ultimate
+                                        Guide to Success on Adzilla</a></h5>
+                            </div>
+                            <div class="pera-text">
+                                <p>This comprehensive guide equips you with the tools and strategies needed to succeed
+                                    on Adzilla, from creating compelling ad titles to effective descriptions.
+                                </p>
+                            </div>
+                            <a href="blog-details.html" class="cmn-btn mt-30 w-100">read more</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="blog-box">
+                        <a href="blog-details.html">
+                            <div class="img-box">
+                                <img src="assets/img/blog/3.jpg" alt="">
+                            </div>
+                        </a>
+                        <div class="content-box">
+                            <ul class="meta">
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-user"></i></span>
+                                    <span>by Admin</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-messages"></i></span>
+                                    <span>25</span>
+                                </li>
+                                <li class="item">
+                                    <span class="icon"><i class="fa-regular fa-eye"></i></span>
+                                    <span>2120 Views</span>
+                                </li>
+                            </ul>
+                            <div class=" blog-title">
+                                <h5><a href="blog-details.html">The Adzilla Advantage: Why Classified Ads Are the
+                                        Ultimate Solution for Buying and Selling</a></h5>
+                            </div>
+                            <div class="pera-text">
+                                <p>Explore the benefits of using Adzilla's classified ads platform and learn why it's
+                                    the ultimate solution for buying and selling products and services.
+                                </p>
+                            </div>
+                            <a href="blog-details.html" class="cmn-btn mt-30 w-100">read more</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section end -->
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo mb-30">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit
+                            excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                        </p>
+
+                        <div class="social-area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Newsletter</h5>
+                        <p>Subscribe To Our Mailing List
+                            And Stay Up To Date</p>
+                        <form class="newsletter-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <button type="button" class="subscribe-btn"><i
+                                    class="fa-regular fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Jquery_Js_link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+    <!-- Bootstrap_Js_link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl_carausel_Js_link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper_Js_link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- select2_Js_link -->
+    <script src="assets/js/select2.min.js"></script>
+
+
+    <!-- Main_Js_link -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdZilla</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- jqvmap map css link -->
+    <link rel="stylesheet" href="assets/css/jqvmap.min.css">
+    <!-- Nice select css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloderFunction()" class="">
+
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">All Ads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="posts.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">Post your ad</span></a>
+                    </li>
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+
+    <!-- Products section start -->
+    <div class="products-section">
+        <div class="container">
+            <!-- Ad section2 start -->
+            <div class="ads-section2 pt-50 pb-50">
+                <div class="container">
+                    <div class="row">
+                        <a href="" class="ads-box2">
+                            <img class="w-100" src="./assets/img/ads/4.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- Ad section2 end -->
+            <!-- Multiple search section start -->
+            <div class="multiple-search-section">
+                <div class="multiple-search-section-inner">
+                    <div class="row">
+                        <div class="col-12">
+                            <form class="multiple-search-box">
+                                <div class="input-box">
+                                    <select class="cmn-select2" name="state">
+                                        <option value="AL">All Categories</option>
+                                        <option value="AL">Automobiles</option>
+                                        <option value="WY">Phones & Tablets</option>
+                                        <option value="WY">Electronics</option>
+                                        <option value="WY">Furniture & Appliances</option>
+                                        <option value="WY">Real estate</option>
+                                        <option value="WY">Animals & Pets</option>
+                                        <option value="WY">Fashion</option>
+                                        <option value="WY">Beauty & Well being</option>
+                                        <option value="WY">Jobs</option>
+                                        <option value="WY">Services</option>
+                                        <option value="WY">Learning</option>
+                                        <option value="WY">Local Events</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" class="form-control" placeholder="What are you looking for...">
+                                    <div class="icon-area">
+                                        <i class="fa-regular fa-magnifying-glass-plus"></i>
+                                    </div>
+                                </div>
+                                <div class="input-box border-0">
+                                    <input type="text" class="form-control" placeholder="Where">
+                                    <div class="icon-area">
+                                        <i class="fa-regular fa-location-dot"></i>
+                                    </div>
+                                </div>
+                                <button type="button" class="multiple-search-btn">
+                                    <span><i class="fa-regular fa-magnifying-glass"></i></span>
+                                    <span class="d-lg-none">Find</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-seciton">
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="home-1.html"><i class="fa-light fa-house"></i>
+                                            Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Bangladesh</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Multiple search section end -->
+            <div class="row g-4">
+                <div class="col-xl-3 col-lg-4">
+                    <div class="sidebar">
+                        <div class="mobile-filter-bar d-lg-none">
+                            <button class="cmn-btn w-100" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                <i class="fa-regular fa-filter-list"></i> Filters
+                            </button>
+
+                            <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                                <div class="offcanvas-header">
+                                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with
+                                        scrolling</h5>
+                                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close">
+                                        <i class="fa-regular fa-arrow-left"></i></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <div class="widget-title">
+                                        <h6>Sort by</h6>
+                                    </div>
+                                    <div>
+                                        <label class="form-label">Sort results by</label>
+                                        <div class="nice-select-section">
+                                            <select class="nice-select">
+                                                <option data-display="Date: Oldest on top">Date: Oldest on top</option>
+                                                <option value="1">Some option</option>
+                                                <option value="2">Another option</option>
+                                                <option value="3">A disabled option</option>
+                                                <option value="4">Potato</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label class="form-label">Type of poster</label>
+                                        <div class="nice-select-section">
+                                            <select class="nice-select">
+                                                <option data-display="All">All</option>
+                                                <option value="1">Members</option>
+                                                <option value="2">Athoriezed dealers</option>
+                                                <option value="3">Athorie</option>
+                                                <option value="4">Non Members</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <hr class="cmn-hr2">
+                                    <div class="widget-title">
+                                        <h6>Filter by Price</h6>
+                                    </div>
+                                    <div class="range-area">
+                                        <input type="text" class="js-range-slider" name="my_range" value=""
+                                            data-type="double" data-min="0" data-max="1000" data-from="80" data-to="500"
+                                            data-grid="false">
+                                    </div>
+                                    <h5 class="mt-20">Price : <span class="highlight">$80 - $500</span></h5>
+                                    <hr class="cmn-hr2">
+                                    <div class="widget-title">
+                                        <h6>Filter by</h6>
+                                    </div>
+                                    <div class="accordion" id="accordionExample">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOne" aria-expanded="true"
+                                                    aria-controls="collapseOne">
+                                                    Category
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="accordion-collapse collapse show"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <ul class="category-container">
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <div class="title">All Categories</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/monitor.png" alt="">
+                                                                <span>Electronics</span>
+                                                            </a>
+                                                            <ul class="sub-category-container">
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Home Appliances</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Laptops</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        ACs & Home Electronics </a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Laptop & Computer Accessories </a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Desktop Computers </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/phone.png" alt="">
+                                                                <span>mobile</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/house.png" alt="">
+                                                                <span>Property</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/washing-machine.png"
+                                                                    alt="">
+                                                                <span>Home & Living</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/car.png" alt="">
+                                                                <span>Vehicles</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/football-ball.png"
+                                                                    alt="">
+                                                                <span>Hobbies, Sports & Kids</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/eco-factory.png" alt="">
+                                                                <span>Business & Industry</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/essential.png" alt="">
+                                                                <span>Essentials</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/mortarboard.png" alt="">
+                                                                <span>Education</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/commodity.png" alt="">
+                                                                <span>Agriculture</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/repair.png" alt="">
+                                                                <span> Services</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/suitcase.png" alt="">
+                                                                <span>Jobs</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/international-recruitment.png"
+                                                                    alt="">
+                                                                <span> Overseas Jobs</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/fashion.png" alt="">
+                                                                <span> Women's Fashion</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/polo.png" alt="">
+                                                                <span> Men's Fashion</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <img src="./assets/img/category/cat.png" alt="">
+                                                                <span> Pets & Animals</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                                    aria-expanded="false" aria-controls="collapseTwo">
+                                                    Location
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="accordion-collapse collapse"
+                                                data-bs-parent="#accordionExample">
+                                                <div class="accordion-body">
+                                                    <ul class="category-container">
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <div class="title">All of Bangladesh</div>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>Dhaka</span>
+                                                            </a>
+                                                            <ul class="sub-category-container">
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Uttara</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Gulshan</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Khilgaon</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Mohammadpur</a>
+                                                                </li>
+                                                                <li class="sub-item">
+                                                                    <a href="">
+                                                                        Malibag </a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+
+                                                                <span>
+                                                                    Dhaka Division </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Rangpur</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>Rangpur Division</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Chattogram</span>
+                                                            </a>
+                                                        </li>
+
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Rajshahi</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Khulna</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Sylhet</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Barishal</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span> Mymensingh Division</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+
+                                                                <span> Services</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+
+                                                                <span>Jobs</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Rajshahi Division</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Chattogram Division</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="item">
+                                                            <a href="">
+                                                                <span>
+                                                                    Barishal Division</span>
+                                                            </a>
+                                                        </li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-none d-lg-block">
+                            <div class="widget-title">
+                                <h6>Sort by</h6>
+                            </div>
+                            <div>
+                                <label class="form-label">Sort results by</label>
+                                <div class="nice-select-section">
+                                    <select class="nice-select">
+                                        <option data-display="Date: Oldest on top">Date: Oldest on top</option>
+                                        <option value="1">Some option</option>
+                                        <option value="2">Another option</option>
+                                        <option value="3">A disabled option</option>
+                                        <option value="4">Potato</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-label">Type of poster</label>
+                                <div class="nice-select-section">
+                                    <select class="nice-select">
+                                        <option data-display="All">All</option>
+                                        <option value="1">Members</option>
+                                        <option value="2">Athoriezed dealers</option>
+                                        <option value="3">Athorie</option>
+                                        <option value="4">Non Members</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <hr class="cmn-hr2">
+                            <div class="widget-title">
+                                <h6>Filter by Price</h6>
+                            </div>
+                            <div class="range-area">
+                                <input type="text" class="js-range-slider" name="my_range" value="" data-type="double"
+                                    data-min="0" data-max="1000" data-from="80" data-to="500" data-grid="false">
+                            </div>
+                            <h5 class="mt-20">Price : <span class="highlight">$80 - $500</span></h5>
+                            <hr class="cmn-hr2">
+                            <div class="widget-title">
+                                <h6>Filter by</h6>
+                            </div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            Category
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="category-container">
+                                                <li class="item">
+                                                    <a href="">
+                                                        <div class="title">All Categories</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/monitor.png" alt="">
+                                                        <span>Electronics</span>
+                                                    </a>
+                                                    <ul class="sub-category-container">
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Home Appliances</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Laptops</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                ACs & Home Electronics </a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Laptop & Computer Accessories </a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Desktop Computers </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/phone.png" alt="">
+                                                        <span>mobile</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/house.png" alt="">
+                                                        <span>Property</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/washing-machine.png" alt="">
+                                                        <span>Home & Living</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/car.png" alt="">
+                                                        <span>Vehicles</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/football-ball.png" alt="">
+                                                        <span>Hobbies, Sports & Kids</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/eco-factory.png" alt="">
+                                                        <span>Business & Industry</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/essential.png" alt="">
+                                                        <span>Essentials</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/mortarboard.png" alt="">
+                                                        <span>Education</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/commodity.png" alt="">
+                                                        <span>Agriculture</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/repair.png" alt="">
+                                                        <span> Services</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/suitcase.png" alt="">
+                                                        <span>Jobs</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/international-recruitment.png"
+                                                            alt="">
+                                                        <span> Overseas Jobs</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/fashion.png" alt="">
+                                                        <span> Women's Fashion</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/polo.png" alt="">
+                                                        <span> Men's Fashion</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <img src="./assets/img/category/cat.png" alt="">
+                                                        <span> Pets & Animals</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            Location
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <ul class="category-container">
+                                                <li class="item">
+                                                    <a href="">
+                                                        <div class="title">All of Bangladesh</div>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>Dhaka</span>
+                                                    </a>
+                                                    <ul class="sub-category-container">
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Uttara</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Gulshan</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Khilgaon</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Mohammadpur</a>
+                                                        </li>
+                                                        <li class="sub-item">
+                                                            <a href="">
+                                                                Malibag </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+
+                                                        <span>
+                                                            Dhaka Division </span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Rangpur</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>Rangpur Division</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Chattogram</span>
+                                                    </a>
+                                                </li>
+
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Rajshahi</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Khulna</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Sylhet</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Barishal</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span> Mymensingh Division</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+
+                                                        <span> Services</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+
+                                                        <span>Jobs</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Rajshahi Division</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Chattogram Division</span>
+                                                    </a>
+                                                </li>
+                                                <li class="item">
+                                                    <a href="">
+                                                        <span>
+                                                            Barishal Division</span>
+                                                    </a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- Ads section start -->
+                            <div class="ads-section3 mt-20">
+                                <div class="ads-box3">
+                                    <img src="./assets/img/ads/5.jpg" alt="">
+                                </div>
+                                <div class="ads-box3">
+                                    <img src="./assets/img/ads/6.jpg" alt="">
+                                </div>
+                            </div>
+
+                            <!-- Ads section end -->
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xl-9 col-lg-8">
+                    <div class="main-content">
+                        <div class="row">
+                            <div>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="home-1.html"> Electronics</a>
+                                    </li>
+                                    <li class="breadcrumb-item active" aria-current="page">Laptops</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/1.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Vehicles</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">clasic cars</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">red clasic car</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/2.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">mobile phones</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">apple</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">iphone 14 pro max</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">1days ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>negotiable</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/3.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">health</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">hospitals</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">doctors requird</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/4.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Mobile phones</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">samsung</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">samsung galaxy s9</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">2days ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/5.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">best 4k drone</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>florida,
+                                                USA</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/6.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area ">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Vehicles</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">clasic cars</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">black clasic car</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>london,
+                                                uk</span><span class="update-time">2hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/7.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Vehicles</a>
+                                            <span><i class="fa-regular fa-angle-right"></i></span>
+                                            <a href="">skuti</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Yamaha NMax 155</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+                                <div class="ads-card">
+                                    <a href="product-details.html">
+                                        <div class="thumbs-area">
+                                            <img src="assets/img/feature-section/8.jpg" alt="img">
+                                        </div>
+                                    </a>
+                                    <div class="content-area">
+                                        <div class="rate-area active">
+                                            <a href="javascript:void(0)" class="item"><i
+                                                    class="fa-regular fa-heart"></i></a>
+                                        </div>
+                                        <div class="category">
+                                            <a href="">Electronics</a>
+                                        </div>
+                                        <hr>
+                                        <h5 class="title"><a href="">Fancy Lamps For Sale</a>
+                                        </h5>
+                                        <div class="location"><i class="fa-regular fa-location-dot"></i>
+                                            <span>Dhaka,
+                                                Bangladesh</span><span class="update-time">24hrs ago</span>
+                                        </div>
+                                        <div class="review-area">
+                                            <ul class="ratings">
+                                                <li>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="active fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                    <i class="fa-solid fa-star"></i>
+                                                </li>
+                                            </ul>
+                                            <p class="mb-0"><span>4.8 </span> <span>(167 reviews)</span></p>
+                                        </div>
+                                        <div class="content-bottom">
+                                            <div class="price">
+                                                <h5>$145,12</h5>
+                                                <span>fixed</span>
+                                            </div>
+                                            <div class="duration">
+                                                <span>Views: 1400</span>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Products section end -->
+
+
+
+
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo mb-30">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit
+                            excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                        </p>
+
+                        <div class="social-area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Newsletter</h5>
+                        <p>Subscribe To Our Mailing List
+                            And Stay Up To Date</p>
+                        <form class="newsletter-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <button type="button" class="subscribe-btn"><i
+                                    class="fa-regular fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+
+    <!-- Modal section start -->
+    <div class="country-flags-modal-section">
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title" id="staticBackdropLabel"><span class="highlight"><i
+                                    class="fa-regular fa-location-dot"></i></span><span>Select a country</span></h1>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="country-flags-container">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/bd.png" alt="">
+                                        <span>Bangladesh</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/af.png" alt="">
+                                        <span>Afghanistan</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/ax.png" alt="">
+                                        <span>Åland Islands</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/al.png" alt="">
+                                        <span> Albania</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/dz.png" alt="">
+                                        <span> Algeria</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/in.png" alt="">
+                                        <span> india</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/pk.png" alt="">
+                                        <span> pakistan</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/np.png" alt="">
+                                        <span> nepal</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/ae.png" alt="">
+                                        <span> UAE</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/sa.png" alt="">
+                                        <span> saudi arabia</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/us.png" alt="">
+                                        <span> USA</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/ng.png" alt="">
+                                        <span> nigeria</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/my.png" alt="">
+                                        <span> malaysia</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/id.png" alt="">
+                                        <span> indonesia</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/qa.png" alt="">
+                                        <span> qatar</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/br.png" alt="">
+                                        <span> brazil</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/mv.png" alt="">
+                                        <span> maldives</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/lk.png" alt="">
+                                        <span> sri lanka</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/bt.png" alt="">
+                                        <span> bhutan</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <img src="./assets/img/country-flags/png100px/au.png" alt="">
+                                        <span> australia</span>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal section end -->
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Slick slider js link -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Twism map Js link -->
+    <script src="assets/js/jquery.twism.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+
+
+
+
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>

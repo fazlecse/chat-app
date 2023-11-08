@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdZilla</title>
+    <!-- Favicon-link -->
+    <link rel="shortcut icon" href="assets/img/logo/favicon.png" type="image/x-icon">
+
+    <!-- Fontawesome6-Js-link -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
+    <!-- Bootstrap5-Css-link -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Owl-carousel-Css-link -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+    <!-- Slick-slider-Css-link -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+    <!-- select2-Css-link -->
+    <link rel="stylesheet" href="assets/css/select2.min.css">
+    <!-- jqvmap map css link -->
+    <link rel="stylesheet" href="assets/css/jqvmap.min.css">
+    <!-- Nice select css link -->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/ion.rangeSlider.min.css">
+    <!-- rangeSlider Css link -->
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+    <!-- intlTelInput -Css link -->
+    <link rel="stylesheet" href="assets/css/intlTelInput.min.css">
+
+
+
+    <!-- Style Css link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body onload="preloderFunction()" class="">
+
+    <!-- Preloader section start -->
+    <div id="preloader">
+        <img class="preloader-image" src="./assets/img/preloader/buy.png" alt="">
+    </div>
+    <!-- Preloader section end -->
+
+    <!-- Nav section start -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand logo" href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar">
+                <i class="fa-light fa-list"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <a class="navbar-brand" href="index.html"><img class="logo" src="assets/img/logo/logo.png"
+                            alt=""></a>
+                    <button type="button" class="cmn-btn-close" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                            class="fa-light fa-arrow-right"></i></button>
+                </div>
+                <div class="offcanvas-body align-items-center justify-content-between">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">All Ads</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pricing.html">pricing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.html">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right">
+                <ul class="custom-nav">
+                    <li class="nav-item">
+                        <div class="profile-box">
+                            <div class="profile">
+                                <img src="./assets/img/Person/1.jpg" class="img-fluid" alt="">
+                            </div>
+                            <ul class="user-dropdown">
+                                <li>
+                                    <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                                </li>
+                                <li>
+                                    <a href="support-ticket.html"> <i class="fal fa-user-headset"></i> Support </a>
+                                </li>
+                                <li>
+                                    <a href="edit-profile.html"> <i class="fal fa-user-cog"></i> Account Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link get-start-btn" href="posts.html">
+                            <span><i class="fa-regular fa-circle-plus"></i> </span>
+                            <span class="d-none d-md-block">Post your ad</span></a>
+                    </li>
+                    <!-- <li>
+                        <a id="toggle-btn" class="nav-link d-flex toggle-btn">
+                            <i class="fa-regular fa-moon" id="moon"></i>
+                            <i class="fa-regular fa-sun-bright" id="sun"></i>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav section end -->
+
+    <!-- Bottom Mobile Tab nav section start -->
+    <ul class="nav bottom-nav fixed-bottom d-lg-none">
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasNavbar"
+                href="#offcanvasNavbar" aria-current="page"><i class="fa-light fa-list"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-planet-ringed"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active"><i class="fa-light fa-house"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-address-book"></i></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fa-light fa-user"></i></a>
+        </li>
+    </ul>
+    <!-- Bottom Mobile Tab nav section end -->
+
+    <!-- Policy section start -->
+    <section class="policy-section">
+        <div class="container">
+            <div class="row">
+                <div class="policy-section-inner">
+                    <div class="section-header">
+                        <h3 class="section-title">Privacy Policy</h3>
+                        <small>last updated on January 01, 2024</small>
+                    </div>
+                    <p>
+                        At Adzilla, we value your privacy and are committed to protecting your personal information.
+                        This Privacy Policy outlines how we collect, use, disclose, and protect the data you provide
+                        while using our classified ads
+                        platform.
+                    </p>
+
+                    <h5 class="mt-30">Information We Collect</h5>
+                    <div class="policy-list mt-10">
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>We may collect personally identifiable information, such as your name, email address,
+                                phone number, and other information you provide when you register, contact us, or use
+                                our services.</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>
+                                We automatically collect information that your browser sends whenever you visit our
+                                website. This may include your IP address, browser type, browser version, the pages you
+                                visit, and the time and date of your
+                                visit.
+                            </span>
+                        </div>
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>We use cookies to collect information and improve your experience. You can configure
+                                your browser to block or disable cookies, but this may affect your ability to use our
+                                services.</span>
+                        </div>
+                    </div>
+                    <h5 class="mt-30">How We Use Your Information</h5>
+                    <div class="policy-list mt-10">
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>We use your information to provide our services and maintain your account.</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>We use your information to understand how our services are used and make
+                                improvements.</span>
+                        </div>
+                        <div class="item">
+                            <span class="icon"><i class="fa-regular fa-circle-check"></i></span>
+                            <span>We may use your contact information to send you important updates, newsletters, or
+                                respond to your inquiries.</span>
+                        </div>
+                    </div>
+                    <h5 class="mt-30">Data Sharing and Disclosure</h5>
+                    <div class="mt-10">
+                        We may share your information with trusted third parties for purposes such as data analysis,
+                        payment processing, customer support, and other services. We do not sell, rent, or trade your
+                        personal information to third
+                        parties for marketing purposes.
+                    </div>
+                    <h5 class="mt-30">Security</h5>
+                    <div class="mt-10">
+                        We take reasonable measures to protect your personal information from unauthorized access,
+                        disclosure, alteration, or destruction. However, no method of transmission over the Internet or
+                        electronic storage is 100%
+                        secure.
+                    </div>
+                    <h5 class="mt-30">Your Choices</h5>
+                    <div class="mt-10">
+                        You may review, update, or delete your personal information by contacting us. You can opt-out of
+                        receiving marketing communications by following the unsubscribe instructions in emails or
+                        contacting us directly.
+                    </div>
+                    <h5 class="mt-30">Changes to this Privacy Policy</h5>
+                    <div class="mt-10">
+                        We may update our Privacy Policy from time to time. We will notify you of any changes by posting
+                        the new Privacy Policy on this page with an updated effective date.
+                    </div>
+                    <h5 class="mt-30">Contact Us</h5>
+                    <div class="mt-10">
+                        If you have any questions or concerns about this Privacy Policy, please contact us at
+                        user@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pricing-bg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#CCE8FF" fill-opacity="1"
+                    d="M0,32L40,42.7C80,53,160,75,240,80C320,85,400,75,480,85.3C560,96,640,128,720,165.3C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+                </path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Policy section end -->
+
+
+
+    <!-- Footer Section start -->
+    <section class="footer-section pb-50">
+        <div class="container">
+            <div class="row gy-4 gy-sm-5">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="footer-widget">
+                        <div class="widget-logo mb-30">
+                            <a href="#nav_area"><img class="logo" src="assets/img/logo/logo-white.png" alt=""></a>
+                        </div>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur fuga odit
+                            excepturi,
+                            natus voluptate commodi qui sunt quisquam cupiditate molestiae?
+                        </p>
+
+                        <div class="social-area mt-50">
+                            <ul class="d-flex">
+                                <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Quick Links</h5>
+                        <ul>
+                            <li><a class="widget-link" href="about.html">About</a></li>
+                            <li><a class="widget-link" href="faq.html">FAQ</a></li>
+                            <li><a class="widget-link" href="index.html">Home</a></li>
+                            <li><a class="widget-link" href="blog.html">Blog</a></li>
+                            <li><a class="widget-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3 ps-lg-5">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Company Policy</h5>
+                        <ul>
+                            <li><a class="widget-link" href="policy.html">Privacy Policy</a></li>
+                            <li><a class="widget-link" href="">Refund Policy</a></li>
+                            <li><a class="widget-link" href="">Terms of use</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 pt-sm-0 pt-3">
+                    <div class="footer-widget">
+                        <h5 class="widget-title">Newsletter</h5>
+                        <p>Subscribe To Our Mailing List
+                            And Stay Up To Date</p>
+                        <form class="newsletter-form">
+                            <input type="text" class="form-control" placeholder="Your email">
+                            <button type="button" class="subscribe-btn"><i
+                                    class="fa-regular fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="cmn-hr">
+            <!-- Copyright-area-start -->
+            <div class="copyright-area">
+                <div class="row gy-4">
+                    <div class="col-sm-6">
+                        <p>Copyright ©2023 <a class="highlight" href="index.html">Email Template</a> All Rights
+                            Reserved
+                        </p>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="language">
+                            <a href="" class="language">English</a>
+                            <a href="" class="language">Spanish</a>
+                            <a href="" class="language">Germany</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Copyright-area-end -->
+        </div>
+    </section>
+    <!-- Footer Section end -->
+
+
+
+
+    <!-- Category modal section start -->
+    <div class="category-modal-section">
+        <div class="modal fade" id="category-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">
+                            Select a category
+                        </h1>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="category-list">
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/monitor.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Electronics</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/phone.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Mobile</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/car.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Vehicles</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/washing-machine.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Home & Living</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/cat.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Pets & Animals</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/house.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Property</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/fashion.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Women's Fashion</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/polo.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Men's Fashion</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/football-ball.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Hobbies, Sports & Kids</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/eco-factory.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Business & Industry</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/essential.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Essentials</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/mortarboard.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Education</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/commodity.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Agriculture</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/repair.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Services</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/suitcase.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Jobs</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                    <a href="" class="item">
+                                        <div class="icon-area">
+                                            <img src="./assets/img/category/international-recruitment.png" alt="">
+                                        </div>
+                                        <div class="content-area">
+                                            <h5>Overseas Jobs</h5>
+                                            <span>12,990 ads</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Category modal section end -->
+
+    <!-- Location modal section start -->
+    <div class="Location-modal-section">
+        <div class="modal fade" id="location-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title">
+                            Select a lacation
+                        </h1>
+                        <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
+                            <i class="fa-light fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="search-box">
+                            <input type="text" class="form-control" placeholder="Search here...">
+                            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+                        </div>
+                        <hr class="cmn-hr2">
+                        <div class="country-flags-container">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Dhaka</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rangpur</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rajshahi</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Chattogram</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Khulna</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Sylhet</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>barishal</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span> mymenshingh</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Dhaka</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rangpur</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rajshahi</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Chattogram</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Khulna</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Sylhet</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>barishal</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span> mymenshingh</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Dhaka</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rangpur</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rajshahi</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Chattogram</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Khulna</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Sylhet</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>barishal</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span> mymenshingh</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Dhaka</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rangpur</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Rajshahi</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Chattogram</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Khulna</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>Sylhet</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span>barishal</span>
+                                    </a>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="" class="item">
+                                        <span> mymenshingh</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Location modal section end -->
+
+
+
+
+
+    <!-- Jquery Js link -->
+    <script src="assets/js/jquery-3.6.1.min.js"></script>
+    <!-- <script src="assets/js/jquery-3.7.1.min.js"></script> -->
+
+    <!-- Bootstrap Js link -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Owl carausel Js link -->
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- Swiper Js link -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Slick slider js link -->
+    <script src="assets/js/slick.min.js"></script>
+    <!-- select2 Js link -->
+    <script src="assets/js/select2.min.js"></script>
+    <!-- Twism map Js link -->
+    <script src="assets/js/jquery.twism.js"></script>
+    <!-- Nice select Js link -->
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <!-- rangeSlider Js link -->
+    <script src="assets/js/ion.rangeSlider.min.js"></script>
+    <!-- fancybox Js link -->
+    <script src="assets/js/fancybox.umd.js"></script>
+    <!-- intlTelInput Js link -->
+    <script src="assets/js/intlTelInput.min.js"></script>
+
+
+
+
+
+
+
+    <!-- Main Js link -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
