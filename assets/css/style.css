@@ -819,6 +819,41 @@ Reusable style section start
   background-color: var(--primary-color-opacity-low);
 }
 
+.cmn-box2-item {
+  padding: 20px;
+}
+
+.cmn-box2-item:nth-child(1) {
+  border-right: 1px solid var(--border-color1);
+  border-bottom: 1px solid var(--border-color1);
+}
+
+.cmn-box2-item:nth-child(2) {
+  border-bottom: 1px solid var(--border-color1);
+}
+
+.cmn-box2-item:nth-child(3) {
+  border-right: 1px solid var(--border-color1);
+}
+
+.cmn-box2 {
+  text-align: center;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.cmn-box2 .icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: var(--primary-color-opacity-low);
+  border-radius: 5px;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
 .text-underline {
   position: relative;
   z-index: 1;
@@ -828,7 +863,6 @@ Reusable style section start
   mask-image: url(../img/svg/download2.svg);
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: 100% 100%;
   bottom: -0.1em;
   content: "";
   display: block;
@@ -1083,6 +1117,17 @@ Offcanvas end
   top: 0;
   left: 0;
   border-radius: 0 0% 100% 0;
+  z-index: -1;
+}
+
+.shape2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-color: var(--primary-color-opacity-low);
+  top: 0;
+  right: 0;
+  border-radius: 0 0 0 100%;
   z-index: -1;
 }
 
@@ -1422,6 +1467,7 @@ section {
 
 .section-title {
   max-width: 560px;
+  margin-bottom: 20px;
 }
 
 .section-subtitle {
@@ -2802,216 +2848,74 @@ Hero end
 Feature section end
 ----------------------------------------------*/
 /*----------------------------------------------
-05. Location map section start
+05. About section start
 ----------------------------------------------*/
-.location-map-section-inner {
-  box-shadow: var(--shadow3);
-  padding: 30px;
-  border-radius: 5px;
+.about-section {
+  position: relative;
 }
-
-.location-map-list {
+.about-section .about-image-area {
+  text-align: center;
+}
+.about-section .about-image-area img {
+  max-width: 600px;
+  width: 100%;
+}
+.about-section .about-content .item-list-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
+}
+.about-section .about-content .item-list-container .item {
+  display: flex;
+  gap: 20px;
+}
+.about-section .about-content .icon-box {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color-opacity-low);
+  color: var(--primary-color);
+  border-radius: 5px;
+  font-size: 18px;
 }
 
-#worldmap {
-  cursor: pointer;
+@media (max-width: 767px) {
+  .about-section {
+    text-align: center;
+  }
+  .about-section .about-content .item-list-container .item {
+    flex-direction: column;
+  }
 }
-
 /*----------------------------------------------
-04. Location map section end
+About section end
 ----------------------------------------------*/
 /*----------------------------------------------
-06. Featured section start
+06. Why Choose us section start
 ----------------------------------------------*/
-.featured-section {
+/*----------------------------------------------
+Why Choose us section end
+----------------------------------------------*/
+.why-choose-us-section {
   background-color: var(--bg-color1);
 }
 
-.ads-card {
-  font-size: 13px;
-  border-radius: 5px;
-  border: 1px solid var(--border-color1);
-  background-color: var(--white);
-  overflow: hidden;
-}
-.ads-card .thumbs-area {
-  overflow: hidden;
-}
-.ads-card .thumbs-area img {
-  transition: var(--transition);
-  width: 100%;
-}
-.ads-card:hover .thumbs-area img {
-  transform: scale(1.1);
-}
-.ads-card .content-area {
-  position: relative;
-  padding: 15px;
-}
-.ads-card .content-area .rate-area {
-  position: absolute;
-  top: -17px;
-  right: 20px;
-}
-.ads-card .content-area .rate-area .item {
-  background-color: var(--white);
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  box-shadow: var(--shadow3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.ads-card .content-area .rate-area.active {
-  color: var(--primary-color);
-}
-.ads-card .content-area .category {
-  text-transform: capitalize;
-}
-.ads-card .content-area .title {
-  text-transform: capitalize;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  margin-bottom: 7px;
-}
-.ads-card .content-area .location {
-  text-transform: capitalize;
-  margin-bottom: 15px;
-  display: flex;
-  gap: 5px;
-}
-.ads-card .content-area .location .update-time {
-  color: var(--primary-color);
-}
-.ads-card .content-area .content-bottom {
-  margin-top: 20px;
-  text-transform: capitalize;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  border-top: 1px solid var(--border-color1);
-  padding-top: 15px;
-}
-.ads-card .content-area .content-bottom .duration {
-  display: flex;
-  gap: 5px;
-}
-.ads-card .content-area .content-bottom .price {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.review-area {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  text-transform: capitalize;
-}
-.review-area p {
-  color: var(--heading-color);
-  font-weight: 500;
-}
-
-.rtl .ads-card .content-area .rate-area {
-  right: auto;
-  left: 20px;
+.why-choose-us-thumbs img {
+  border-radius: 25px;
 }
 
 /*----------------------------------------------
-Featured section end
+07. How it works section start
 ----------------------------------------------*/
-/*----------------------------------------------
-07. Destination section start
-----------------------------------------------*/
-.destination-box {
-  position: relative;
-  transition: var(--transition);
-  overflow: hidden;
-  display: block;
-}
-.destination-box::after {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(255, 255, 255, 0.1) 40%);
-  border-radius: 5px;
-}
-.destination-box:hover .thumbs-area img {
-  transform: scale(1.1);
-}
-.destination-box:hover .content-area {
-  bottom: 15px;
-}
-.destination-box:hover .content-area .destination-info {
-  opacity: 1;
-  visibility: visible;
-}
-.destination-box .thumbs-area {
-  border-radius: 5px;
-  overflow: hidden;
-  height: 280px;
-}
-.destination-box .thumbs-area img {
-  border-radius: 5px;
-  transition: var(--transition);
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.destination-box .content-area {
-  z-index: 1;
-  color: var(--white);
-  position: absolute;
-  bottom: 5px;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  transition: var(--transition);
-}
-.destination-box .content-area .title {
-  color: var(--white);
-  font-family: var(--body-font);
-  margin-bottom: 0;
-  font-weight: 500;
-  text-transform: capitalize;
-}
-.destination-box .content-area .destination-info {
-  margin-top: 5px;
-  font-size: 14px;
-  text-transform: capitalize;
-  justify-content: center;
-  border-radius: 5px;
-  opacity: 0;
-  visibility: hidden;
-  transition: var(--transition);
-  position: relative;
-  background-color: var(--primary-color);
-  padding: 4px 10px;
-}
-.destination-box .content-area .destination-info span {
-  font-size: 18px;
-  font-weight: 500;
+.how-it-works-thumbs img {
+  border-radius: 25px;
 }
 
 /*----------------------------------------------
-Destination section end
+How it works section end
 ----------------------------------------------*/
 /*----------------------------------------------
 08. latest ads section start
