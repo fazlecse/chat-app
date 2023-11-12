@@ -951,9 +951,11 @@ Reusable style section start
     border-right: 1px solid var(--border-color1);
     border-bottom: 1px solid var(--border-color1);
 }
+
 .cmn-box2-item:nth-child(2) {
     border-bottom: 1px solid var(--border-color1);
 }
+
 .cmn-box2-item:nth-child(3) {
     border-right: 1px solid var(--border-color1);
 }
@@ -3552,6 +3554,7 @@ Why Choose us section end
         border-radius: 25px;
     }
 }
+
 /*----------------------------------------------
 How it works section end
 ----------------------------------------------*/
@@ -4367,7 +4370,7 @@ pricing section end
             background-size: 50%;
             background-repeat: no-repeat;
             background-position: center;
-            border-radius: 4px;
+            border-radius: 5px;
         }
 
         &:not(.collapsed) {
@@ -4379,7 +4382,7 @@ pricing section end
                 background-size: 50%;
                 background-repeat: no-repeat;
                 background-position: center;
-                border-radius: 4px;
+                border-radius: 5px;
             }
         }
     }
@@ -4415,11 +4418,89 @@ pricing section end
 /*----------------------------------------------
 Faq end
 ----------------------------------------------*/
+/*----------------------------------------------
+09. Testimonial section start
+----------------------------------------------*/
+.testimonial-section {
+    background-image: url(../img/background/avtar_testimonial2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
+    .testimonial-box {
+        position: relative;
+        padding: 20px;
+        background: var(--bg-color2);
+        border-radius: 4px;
+        transition: var(--transition);
+        border: 1px solid var(--border-color1);
+
+        .testimonial-thumbs {
+            position: absolute;
+            right: 20px;
+            top: -25px;
+            background-color: var(--white);
+            border: 1px solid var(--border-color1);
+            padding: 2px;
+            border-radius: 4px;
+
+            img {
+                width: 65px;
+                height: 65px;
+                border-radius: 4px;
+            }
+        }
+
+        .qoute-icon {
+            font-size: 35px;
+            color: var(--primary-color);
+        }
+
+        .quote-area {
+            margin-top: 20px;
+        }
+    }
+
+
+
+    .owl-theme {
+        .owl-nav.disabled+.owl-dots {
+            margin-top: 30px;
+        }
+    }
+
+    .testimonial-carousel .owl-stage-outer {
+        padding-top: 50px;
+    }
+}
+
+
+
+
+// Rtl testimonial section start 
+.rtl {
+    .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
+        margin-right: 0;
+        margin-left: 10px;
+    }
+}
+
+// Rtl testimonial section start 
+
+/*----------------------------------------------
+Testimonial end
+----------------------------------------------*/
 
 /*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
+.blog-btn {
+    display: inline-block;
+
+    i {
+        margin-left: 5px;
+    }
+}
 
 .blog-section {
     background-color: var(--bg-color1);
@@ -4429,7 +4510,7 @@ Faq end
     background: var(--white);
     padding: 10px;
     border-radius: 10px;
-    box-shadow: var(--shadow1);
+    border: 1px solid var(--border-color1);
 
     &:hover {
         .img-box {
@@ -4456,6 +4537,14 @@ Faq end
 
     .content-box {
         padding: 5px;
+
+        .para-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+        }
     }
 
 
@@ -4565,7 +4654,9 @@ Blog section end
 /*----------------------------------------------
 19. Newsletter section start
 ----------------------------------------------*/
-
+.newsletter-inner{
+    background: var(--gradient-bg);
+}
 .newsletter-form {
     margin-top: 40px;
     position: relative;

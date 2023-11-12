@@ -3556,7 +3556,7 @@ pricing section end
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 .faq-section .accordion-button:not(.collapsed)::after {
   background: url(../img/accordion/minus.png);
@@ -3566,7 +3566,7 @@ pricing section end
   background-size: 50%;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 @media (max-width: 767px) {
@@ -3587,8 +3587,68 @@ pricing section end
 Faq end
 ----------------------------------------------*/
 /*----------------------------------------------
+09. Testimonial section start
+----------------------------------------------*/
+.testimonial-section {
+  background-image: url(../img/background/avtar_testimonial2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.testimonial-section .testimonial-box {
+  position: relative;
+  padding: 20px;
+  background: var(--bg-color2);
+  border-radius: 4px;
+  transition: var(--transition);
+  border: 1px solid var(--border-color1);
+}
+.testimonial-section .testimonial-box .testimonial-thumbs {
+  position: absolute;
+  right: 20px;
+  top: -25px;
+  background-color: var(--white);
+  border: 1px solid var(--border-color1);
+  padding: 2px;
+  border-radius: 4px;
+}
+.testimonial-section .testimonial-box .testimonial-thumbs img {
+  width: 65px;
+  height: 65px;
+  border-radius: 4px;
+}
+.testimonial-section .testimonial-box .qoute-icon {
+  font-size: 35px;
+  color: var(--primary-color);
+}
+.testimonial-section .testimonial-box .quote-area {
+  margin-top: 20px;
+}
+.testimonial-section .owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 30px;
+}
+.testimonial-section .testimonial-carousel .owl-stage-outer {
+  padding-top: 50px;
+}
+
+.rtl .testimonial-section .testimonial-box .testimonial-header .testimonial-thumbs {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+/*----------------------------------------------
+Testimonial end
+----------------------------------------------*/
+/*----------------------------------------------
 18. Blog section start
 ----------------------------------------------*/
+.blog-btn {
+  display: inline-block;
+}
+.blog-btn i {
+  margin-left: 5px;
+}
+
 .blog-section {
   background-color: var(--bg-color1);
 }
@@ -3597,7 +3657,7 @@ Faq end
   background: var(--white);
   padding: 10px;
   border-radius: 10px;
-  box-shadow: var(--shadow1);
+  border: 1px solid var(--border-color1);
 }
 .blog-box:hover .img-box {
   border-radius: 10px;
@@ -3618,6 +3678,13 @@ Faq end
 }
 .blog-box .content-box {
   padding: 5px;
+}
+.blog-box .content-box .para-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
 }
 .blog-box .blog-title {
   margin-bottom: 20px;
@@ -3689,6 +3756,10 @@ Blog section end
 /*----------------------------------------------
 19. Newsletter section start
 ----------------------------------------------*/
+.newsletter-inner {
+  background: var(--gradient-bg);
+}
+
 .newsletter-form {
   margin-top: 40px;
   position: relative;
