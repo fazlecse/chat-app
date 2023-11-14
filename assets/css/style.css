@@ -667,11 +667,15 @@ Breadcrumb start
 }
 .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
   content: "\f105";
+  color: var(--white);
   font-family: "Font Awesome 6 Pro";
   font-weight: 400;
 }
+.breadcrumb .breadcrumb-item a {
+  color: var(--white);
+}
 .breadcrumb .breadcrumb-item.active {
-  color: var(--primary-color);
+  color: var(--white);
   text-transform: capitalize;
 }
 
@@ -2564,6 +2568,7 @@ Padding bottom
   transition: backgaound 0.3s ease-out;
   padding: 10px;
   z-index: 9999;
+  background-color: var(--white);
 }
 .navbar .container {
   position: relative;
@@ -2822,6 +2827,7 @@ Nav end
   border: none;
   font-weight: 500;
   cursor: pointer;
+  background: transparent;
   padding: 10px 30px 10px 5px;
 }
 .language-box .form-select:focus {
@@ -3668,6 +3674,42 @@ Footer end
 Copyright end
 ----------------------------------------------*/
 /*----------------------------------------------
+16. Banner section start
+----------------------------------------------*/
+.banner-area {
+  padding-top: 190px;
+  padding-bottom: 100px;
+  background-image: var(--gradient-bg);
+}
+.banner-area h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.breadcrumb-area {
+  font-size: 18px;
+  color: var(--white);
+  font-weight: 500;
+  text-align: center;
+}
+.breadcrumb-area h3 {
+  text-transform: capitalize;
+  color: var(--white);
+}
+
+@media (max-width: 991px) {
+  .banner-area {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+  .banner-area h3 {
+    font-size: 36px;
+  }
+}
+/*----------------------------------------------
+Banner end
+----------------------------------------------*/
+/*----------------------------------------------
 22. Contact section start
 ----------------------------------------------*/
 .contact-section {
@@ -3682,30 +3724,30 @@ Copyright end
 .contact-section .contact-message-area .form-label h5 {
   font-weight: 600;
 }
-.contact-section .contact-message-area .form-control,
-.contact-section .contact-message-area .form-select {
-  border: 1px solid var(--border-color2);
+.contact-section .contact-area .thumbs-area {
+  max-width: 500px;
+  margin: auto;
 }
-.contact-section .contact-message-area .form-control:focus,
-.contact-section .contact-message-area .form-select:focus {
-  border: 1px solid var(--primary-color);
+.contact-section .contact-area .contact-list {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-.contact-section .contact-area {
-  height: 100%;
-  padding: 20px;
-  border-radius: 15px;
-  background-color: var(--black);
-  background-image: url(../img/background/globe.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+.contact-section .contact-area .contact-list .item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.contact-section .contact-area h3,
-.contact-section .contact-area h5 {
-  color: var(--white);
-}
-.contact-section .contact-area p {
-  color: rgba(255, 255, 255, 0.75);
+.contact-section .contact-area .contact-list .item .icon-area {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color-opacity-low);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
 }
 
 .rtl .contact-section .contact-area {

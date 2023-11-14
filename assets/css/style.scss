@@ -759,7 +759,7 @@ Breadcrumb start
             .breadcrumb-item {
                 &::before {
                     content: "\f105";
-                    // color: var(--white);
+                    color: var(--white);
                     font-family: 'Font Awesome 6 Pro';
                     font-weight: 400;
                 }
@@ -767,9 +767,15 @@ Breadcrumb start
         }
     }
 
-    .breadcrumb-item.active {
-        color: var(--primary-color);
-        text-transform: capitalize;
+    .breadcrumb-item {
+        a {
+            color: var(--white);
+        }
+
+        &.active {
+            color: var(--white);
+            text-transform: capitalize;
+        }
     }
 }
 
@@ -978,12 +984,14 @@ Reusable style section start
         margin: auto;
     }
 }
+
 // Responsive cmn box2 start
-@media (max-width: 767px){
-    .cmn-box2-item{
+@media (max-width: 767px) {
+    .cmn-box2-item {
         border: none !important;
     }
 }
+
 // Responsive cmn box2 end
 // cmn box2 end
 // Text underline start
@@ -3084,6 +3092,7 @@ Padding bottom
     transition: backgaound .3s ease-out;
     padding: 10px;
     z-index: 9999;
+    background-color: var(--white);
 
     .container {
         position: relative;
@@ -3413,6 +3422,7 @@ Nav end
         border: none;
         font-weight: 500;
         cursor: pointer;
+        background: transparent;
 
         &:focus {
             box-shadow: none;
@@ -3551,7 +3561,8 @@ Feature section end
             .item-list-container {
                 .item {
                     flex-direction: column;
-                    .icon-box{
+
+                    .icon-box {
                         margin: auto;
                     }
                 }
@@ -3578,6 +3589,7 @@ About section end
         border-radius: 25px;
     }
 }
+
 /*----------------------------------------------
 Why Choose us section end
 ----------------------------------------------*/
@@ -4395,7 +4407,8 @@ Blog section end
                 font-size: 24px;
             }
         }
-        .newsletter-inner{
+
+        .newsletter-inner {
             padding: 30px;
         }
 
@@ -4403,12 +4416,12 @@ Blog section end
 }
 
 @media (max-width: 767px) {
-    .newsletter-section{
+    .newsletter-section {
         .content-area {
             text-align: center;
         }
-       
-    } 
+
+    }
 }
 
 @media (max-width: 575px) {
@@ -4534,24 +4547,75 @@ Footer end
 
 // Responsive copyright start
 @media (max-width: 767px) {
-    .copyright-widget{
+    .copyright-widget {
         justify-content: center;
     }
-    .copyright-area p{
+
+    .copyright-area p {
         text-align: center;
     }
 
 }
+
 @media (max-width: 575px) {
     .copyright-area {
         text-align: center;
     }
 
 }
+
 // Responsive copyright end
 
 /*----------------------------------------------
 Copyright end
+----------------------------------------------*/
+
+
+/*----------------------------------------------
+16. Banner section start
+----------------------------------------------*/
+.banner-area {
+    padding-top: 190px;
+    padding-bottom: 100px;
+    background-image: var(--gradient-bg);
+
+
+
+    h3 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+}
+
+.breadcrumb-area {
+    font-size: 18px;
+    color: var(--white);
+    font-weight: 500;
+    text-align: center;
+
+    h3 {
+        text-transform: capitalize;
+        color: var(--white);
+    }
+}
+
+// Responsive banner section start
+
+@media(max-width: 991px) {
+    .banner-area {
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .banner-area h3 {
+        font-size: 36px
+    }
+}
+
+// Responsive banner section end
+
+/*----------------------------------------------
+Banner end
 ----------------------------------------------*/
 
 
@@ -4575,47 +4639,41 @@ Copyright end
             }
         }
 
-        .form-control,
-        .form-select {
-            border: 1px solid var(--border-color2)
-        }
-
-        .form-control:focus,
-        .form-select:focus {
-            border: 1px solid var(--primary-color)
-        }
 
     }
 
     .contact-area {
-        height: 100%;
-        padding: 20px;
-        border-radius: 15px;
-        background-color: var(--black);
-        background-image: url(../img/background/globe.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-
-        h3,
-        h5 {
-            color: var(--white);
+        .thumbs-area {
+            max-width: 500px;
+            margin: auto;
         }
 
-        p {
-            color: rgba(255, 255, 255, 0.75);
+        .contact-list {
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            .item{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                .icon-area{
+                    width: 40px;
+                    height: 40px;
+                    background-color: var(--primary-color-opacity-low);
+                    border-radius: 5px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: var(--primary-color);
+                }
+            }
         }
-
-
     }
 }
 
 // Contact responsive start
-@media (max-width: 991px) {
-    .contact-section {}
 
-
-}
 
 // Contact responsive end
 
