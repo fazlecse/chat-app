@@ -417,7 +417,7 @@ h3 {
 h4 {
     font-size: 24px;
     margin-bottom: 5px;
-    font-weight: 500;
+    // font-weight: 500;
     text-transform: capitalize;
 }
 
@@ -4575,9 +4575,23 @@ Copyright end
 16. Banner section start
 ----------------------------------------------*/
 .banner-area {
+    position: relative;
     padding-top: 190px;
     padding-bottom: 100px;
     background-image: var(--gradient-bg);
+    z-index: 1;
+    &::after{
+        content: "";
+        position: absolute;
+        background-image: url(../img/banner/waves_white-15.png);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background-size: cover;
+        z-index: -1;
+        background-position: center;
+    }
 
 
 
@@ -4653,11 +4667,13 @@ Banner end
             display: flex;
             flex-wrap: wrap;
             gap: 30px;
-            .item{
+
+            .item {
                 display: flex;
                 align-items: center;
                 gap: 15px;
-                .icon-area{
+
+                .icon-area {
                     width: 40px;
                     height: 40px;
                     background-color: var(--primary-color-opacity-low);
@@ -4739,33 +4755,16 @@ Map section end
 24. Login Signup section start
 ----------------------------------------------*/
 .login-signup-page {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
     background-color: var(--bg-color1);
-
-    .login-signup-page-inner {
-        background-color: var(--white);
-        border-radius: 5px;
-        box-shadow: var(--shadow1);
-        padding: 10px;
-    }
-
-    .login-signup-thums {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
-
-        img {
-            height: 100%;
-        }
-    }
+    position: relative;
 
 
     .login-signup-form {
         padding: 30px;
-
+        background-color: var(--white);
+        border-radius: 5px;
+        z-index: 1;
+        position: relative;
         .logo-area {
             margin-bottom: 20px;
             display: inline-flex;
@@ -4786,7 +4785,9 @@ Map section end
                 width: 16px;
             }
         }
+      
     }
+
 }
 
 .password-box {
@@ -4883,28 +4884,46 @@ Login Signup end
 }
 
 .blog-quote-box {
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     position: relative;
     background-color: var(--bg-color2);
     box-shadow: var(--shadow1);
-    padding: 25px 20px 20px 40px;
-    border-radius: 5px;
+    padding: 25px;
+    border-left: 2px solid var(--primary-color);
 
     .icon-area {
         position: absolute;
-        font-size: 25px;
+        font-size: 60px;
         color: var(--primary-color);
-        top: -30px;
-        left: -20px;
-        background-color: var(--bg-color2);
-        width: 60px;
-        height: 60px;
+        top: 5px;
+        right: 20px;
+        opacity: .1;
+        z-index: 0;
+
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        position: relative;
+        padding: 10px 0 0 30px;
+        margin: 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        box-shadow: var(--shadow1);
+
+        &::after {
+            position: absolute;
+            content: "";
+            background-color: var(--primary-color);
+            width: 20px;
+            height: 2px;
+            left: 0;
+
+        }
+
     }
 }
 
