@@ -5,17 +5,17 @@ Typography
 
 
 :root {
-    --body-font: 'Red Hat Display', sans-serif;
-    --heading-font: 'Ubuntu', sans-serif;
-    --primary-color: #008DFF;
-    --primary-color-deep: #007fe6;
+    --body-font: 'DM Sans', sans-serif;
+    --heading-font: 'Montserrat', sans-serif;
+    --primary-color: hsl(var(--base));
+    --secondary-color: hsl(var(--secondary));
     --heading-color: #26282C;
     --black: #26282C;
     --grayish-blue: #929cbf;
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
-    --btn-hover-bg: #33a4ff;
+    --btn-hover-bg: linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--base)) 100%);
     --soft-green: #ccf888;
     --soft-red: #d82a68;
     --lime-gray: #d0d0d0;
@@ -24,26 +24,32 @@ Typography
     --orange: #FFC83E;
     --input-color: #F9FAFB;
     --input-color2: #ffffff;
-    --primary-color-opacity-low: rgb(0, 141, 255, 0.1);
-    --primary-color-opacity-low2: rgb(0, 141, 255, 0.2);
+    --primary-color-opacity-low: hsl(var(--base)/0.1);
+    --primary-color-opacity-low2: hsl(var(--secondary)/.2);
     --secondary-color-opacity-low: rgb(10, 79, 213, 0.1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
-    --bg-color1: #F9FAFB;
+    --bg-color1: #F8F8FA;
+    --gradient-bg: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
 
     --body-color: #1a1a1a;
     --border-color1: rgba(231, 234, 243, .7);
-    --border-color2: rgba(140,152,164,.25);
+    --border-color2: rgba(140, 152, 164, .25);
 
 
     --shadow1: 0 0.375rem 0.75rem rgba(140, 152, 164, .075);
-    --shadow2:0 .1875rem .75rem rgba(140,152,164,.25);
-    --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140,152,164,.175);
+    --shadow2: 0 .1875rem .75rem rgba(140, 152, 164, .25);
+    --shadow3: 0 0.6125rem 2.5rem 0.6125rem rgba(140, 152, 164, .175);
     --transition: all .3s ease-in-out;
 
-    // --base: var(--base-h) var(--base-s) var(--base-l);
-    // --base-h: 206.8;
-    // --base-s: 100%;
-    // --base-l: 50%;
+    --base: var(--base-h) var(--base-s) var(--base-l);
+    --base-h: 23.8;
+    --base-s: 100%;
+    --base-l: 50%;
+
+    --secondary: var(--secondary-h) var(--secondary-s) var(--secondary-l);
+    --secondary-h: 32.8;
+    --secondary-s: 96.8%;
+    --secondary-l: 51.4%;
 }
 
 /*----------------------------------------------
@@ -373,12 +379,16 @@ textarea.form-control {
     position: relative;
     height: 40px;
 
+    &:hover label {
+        background: var(--btn-hover-bg);
+    }
+
     label {
         font-size: 16px !important;
         margin-bottom: 0;
         height: 40px;
         font-weight: 500 !important;
-        background: var(--primary-color);
+        background: var(--gradient-bg);
         border-radius: 5px;
         color: var(--white);
         display: flex;
@@ -386,6 +396,7 @@ textarea.form-control {
         justify-content: center;
         padding: 10px;
         // cursor: pointer;
+
     }
 
     .form-control {
@@ -807,6 +818,7 @@ body::-webkit-scrollbar-thumb {
         color: var(--primary-color);
     }
 }
+
 // Cmn btn close end
 /*----------------------------------------------
 Reset section end
@@ -951,10 +963,9 @@ Offcanvas section end
 // Cmn btn start
 // --------------------------------------------------------
 .cmn-btn {
-    background-color: var(--primary-color);
-    padding: 10px 15px;
+    background: var(--gradient-bg);
+    padding: 12px 15px;
     border-radius: 4px;
-    border: 1px solid var(--primary-color);
     transition: var(--transition);
     font-size: 16px;
     color: var(--white);
@@ -963,18 +974,14 @@ Offcanvas section end
     justify-content: center;
     font-weight: 500;
     text-transform: capitalize;
+    font-family: var(--heading-font);
     gap: 5px;
 
     &:hover {
         color: var(--white);
-        background-color: var(--btn-hover-bg);
-        border: 1px solid var(--btn-hover-bg);
-        box-shadow: 0 4px 11px rgb(0, 140, 255, .35)
+        background: var(--btn-hover-bg);
     }
 
-    &:focus {
-        box-shadow: 0 4px 11px rgb(0, 140, 255, .35)
-    }
 }
 
 .cmn-btn2 {
@@ -1561,7 +1568,8 @@ hr.divider:after {
     box-shadow: var(--shadow3);
     background-color: var(--white);
     color: var(--heading-color);
-    .dropdown-header{
+
+    .dropdown-header {
         border-bottom: 1px solid var(--border-color1);
     }
 
@@ -1584,7 +1592,8 @@ hr.divider:after {
         height: 21.25rem;
         overflow-y: auto;
     }
-    .dropdown-footer{
+
+    .dropdown-footer {
         border-top: 1px solid var(--border-color1);
     }
 }
@@ -2007,7 +2016,7 @@ Chat section start
                 padding: 5px 10px;
                 border-radius: 15px;
                 border-top-left-radius: 0;
-                background-color: var(--primary-color);
+                background: var(--gradient-bg);
                 color: var(--white);
                 max-width: 85%;
             }
@@ -2024,7 +2033,7 @@ Chat section start
             .message-text {
                 border-top-left-radius: 15px;
                 border-top-right-radius: 0;
-                background-color: var(--white);
+                background: var(--white);
                 color: var(--heading-color);
             }
 
@@ -2706,7 +2715,7 @@ Padding bottom
 // Bottom Mobile Tab nav section start
 // ----------------------------------------------------
 .bottom-nav {
-    background: var(--bg-color3);
+    background: var(--white);
     justify-content: space-around;
     box-shadow: var(--shadow3);
     border-top-right-radius: 10px;
@@ -2883,6 +2892,10 @@ Header section start
         min-width: 340px;
 
         .notification-item {
+            border-radius: 3px;
+            &:hover {
+                background-color: var(--primary-color-opacity-low);
+            }
             a {
                 display: flex;
                 align-items: center;
@@ -2907,9 +2920,7 @@ Header section start
                 color: #919191;
             }
 
-            &:hover {
-                background-color: var(--primary-color-opacity-low);
-            }
+           
         }
     }
 
@@ -3447,8 +3458,12 @@ Account settings profile section start
 
             &.active {
                 color: var(--white);
-                background: var(--primary-color);
+                background: var(--gradient-bg);
                 box-shadow: var(--shadow2);
+
+                &:hover {
+                    background: var(--btn-hover-bg);
+                }
             }
         }
     }

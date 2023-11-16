@@ -63,7 +63,6 @@ Typography
   --white: #ffffff;
   --soft-blue: #C1BFFD;
   --grayish-violet: #f5f4f7;
-  --btn-hover-bg: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
   --btn-hover-bg: linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--base)) 100%);
   --soft-green: #ccf888;
   --moderate-lime-green: #4da44e;
@@ -80,11 +79,7 @@ Typography
   --moderate-lime-green-opacity-low: rgb(77, 163, 78, .1);
   --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
   --bg-color1: #F8F8FA;
-  --bg-color2: #ffffff;
-  --bg-color3: #ffffff;
-  --gradient-bg: linear-gradient(90deg,
-          hsl(var(--base)) 0%,
-          hsl(var(--secondary)) 100%);
+  --gradient-bg: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
   --body-color: #1a1a1a;
   --border-color1: rgba(231, 234, 243, .7);
   --border-color2: rgba(140, 152, 164, .25);
@@ -791,6 +786,29 @@ Reset end
 /*----------------------------------------------
 Reusable style section start
 ----------------------------------------------*/
+.language-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+.language-box .form-select {
+  width: initial;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  padding: 10px 5px 10px 5px;
+}
+.language-box .form-select:focus {
+  box-shadow: none;
+}
+
+@media (min-width: 991px) {
+  .language-box .form-select {
+    padding: 10px 30px 10px 5px;
+  }
+}
 .cmn-box-item:nth-child(2) .cmn-box .icon-area {
   color: var(--moderate-lime-green);
   background-color: var(--moderate-lime-green-opacity-low);
@@ -819,6 +837,15 @@ Reusable style section start
   border-radius: 50%;
   color: var(--primary-color);
   background-color: var(--primary-color-opacity-low);
+}
+
+.rtl .cmn-box2-item:nth-child(1) {
+  border-right: none;
+  border-left: 1px solid var(--border-color1);
+}
+.rtl .cmn-box2-item:nth-child(3) {
+  border-right: none;
+  border-left: 1px solid var(--border-color1);
 }
 
 .cmn-box2-item {
@@ -1148,6 +1175,22 @@ Offcanvas end
   bottom: 0;
   right: 0;
   border-radius: 100% 0 0 0;
+}
+
+.rtl .shape {
+  left: auto;
+  right: 0;
+  border-radius: 0 0 0 100%;
+}
+.rtl .shape2 {
+  right: auto;
+  left: 0;
+  border-radius: 0 0 100% 0;
+}
+.rtl .shape3 {
+  left: 0;
+  right: auto;
+  border-radius: 0 100% 0 0;
 }
 
 .section-header {
@@ -2786,7 +2829,7 @@ Nav end
 02. Bottom Mobile, Tab nav section start
 ----------------------------------------------*/
 .bottom-nav {
-  background: var(--bg-color3);
+  background: var(--white);
   justify-content: space-around;
   box-shadow: var(--shadow2);
   border-top-right-radius: 8px;
@@ -2813,24 +2856,6 @@ Nav end
 }
 .bottom-nav .nav-item .nav-link i {
   font-size: 20px;
-}
-
-.language-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 10px;
-}
-.language-box .form-select {
-  width: initial;
-  border: none;
-  font-weight: 500;
-  cursor: pointer;
-  background: transparent;
-  padding: 10px 30px 10px 5px;
-}
-.language-box .form-select:focus {
-  box-shadow: none;
 }
 
 /*----------------------------------------------
@@ -3583,7 +3608,7 @@ Blog section end
   }
 }
 .rtl .newsletter-section .newsletter-form .form-control {
-  padding: 10px 20px 10px 165px;
+  padding: 10px 20px 10px 140px;
 }
 .rtl .newsletter-section .newsletter-form .subscribe-btn {
   left: 5px;
@@ -3592,11 +3617,6 @@ Blog section end
 .rtl .newsletter-section .newsletter-thumbs img {
   right: auto;
   left: 5%;
-}
-@media (max-width: 1199px) {
-  .rtl .newsletter-section .newsletter-thumbs img {
-    left: 2%;
-  }
 }
 @media (max-width: 575px) {
   .rtl .newsletter-section .newsletter-form .form-control {
@@ -3712,7 +3732,7 @@ Copyright end
 
 @media (max-width: 991px) {
   .banner-area {
-    padding-top: 100px;
+    padding-top: 140px;
     padding-bottom: 50px;
   }
   .banner-area h3 {
@@ -4061,14 +4081,23 @@ Login Signup end
   left: auto;
 }
 .rtl .blog-quote-box {
+  border-left: none;
+  border-right: 2px solid var(--primary-color);
   padding: 25px 40px 20px 20px;
 }
 .rtl .blog-quote-box .icon-area {
-  left: auto;
-  right: -20px;
+  left: 20px;
+  right: auto;
 }
 .rtl .blog-quote-box .icon-area i {
   transform: rotateY(180deg);
+}
+.rtl .blog-quote-box .title {
+  padding: 10px 30px 0 0;
+}
+.rtl .blog-quote-box .title::after {
+  left: auto;
+  right: 0;
 }
 
 /*----------------------------------------------

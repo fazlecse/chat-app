@@ -68,7 +68,6 @@ Typography
     --white: #ffffff;
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
-    --btn-hover-bg: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
     --btn-hover-bg: linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--base)) 100%);
 
     --soft-green: #ccf888;
@@ -86,11 +85,7 @@ Typography
     --moderate-lime-green-opacity-low: rgb(77, 163, 78, .1);
     --soft-red-opacity-low: rgba(216, 42, 103, 0.1);
     --bg-color1: #F8F8FA;
-    --bg-color2: #ffffff;
-    --bg-color3: #ffffff;
-    --gradient-bg: linear-gradient(90deg,
-            hsl(var(--base)) 0%,
-            hsl(var(--secondary)) 100%);
+    --gradient-bg: linear-gradient(90deg, hsl(var(--base)) 0%, hsl(var(--secondary)) 100%);
     --body-color: #1a1a1a;
     --border-color1: rgba(231, 234, 243, .7);
     --border-color2: rgba(140, 152, 164, .25);
@@ -911,6 +906,42 @@ Reset end
 /*----------------------------------------------
 Reusable style section start
 ----------------------------------------------*/
+// Language box start
+.language-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+
+    .form-select {
+        width: initial;
+        border: none;
+        font-weight: 500;
+        cursor: pointer;
+        background: transparent;
+        padding: 10px 5px 10px 5px;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+
+
+    }
+}
+
+// Responsive language box start
+@media(min-width: 991px) {
+    .language-box {
+        .form-select {
+            padding: 10px 30px 10px 5px;
+        }
+    }
+}
+
+// Responsive language box end
+// Language box end
+
 // Cmn box start
 .cmn-box-item:nth-child(2) .cmn-box {
     .icon-area {
@@ -947,6 +978,20 @@ Reusable style section start
     }
 }
 
+// Rtl cmn box start
+.rtl {
+    .cmn-box2-item:nth-child(1) {
+        border-right: none;
+        border-left: 1px solid var(--border-color1);
+    }
+
+    .cmn-box2-item:nth-child(3) {
+        border-right: none;
+        border-left: 1px solid var(--border-color1);
+    }
+}
+
+// Rtl cmn box end
 // Cmn box end
 // cmn box2 start
 .cmn-box2-item {
@@ -1349,6 +1394,8 @@ Offcanvas end
     // z-index: -1;
 }
 
+
+
 .shape2 {
     position: absolute;
     width: 100%;
@@ -1373,6 +1420,28 @@ Offcanvas end
     // z-index: -1;
 }
 
+// rtl shape area start
+.rtl {
+    .shape {
+        left: auto;
+        right: 0;
+        border-radius: 0 0 0 100%;
+    }
+
+    .shape2 {
+        right: auto;
+        left: 0;
+        border-radius: 0 0 100% 0;
+    }
+
+    .shape3 {
+        left: 0;
+        right: auto;
+        border-radius: 0 100% 0 0;
+    }
+}
+
+// rtl shape area end
 // Shape area end
 
 
@@ -3374,7 +3443,7 @@ Nav end
 02. Bottom Mobile, Tab nav section start
 ----------------------------------------------*/
 .bottom-nav {
-    background: var(--bg-color3);
+    background: var(--white);
     justify-content: space-around;
     box-shadow: var(--shadow2);
     border-top-right-radius: 8px;
@@ -3411,27 +3480,6 @@ Nav end
     }
 }
 
-.language-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10px;
-
-    .form-select {
-        width: initial;
-        border: none;
-        font-weight: 500;
-        cursor: pointer;
-        background: transparent;
-
-        &:focus {
-            box-shadow: none;
-        }
-
-        padding: 10px 30px 10px 5px;
-
-    }
-}
 
 /*----------------------------------------------
 Bottom Mobile, Tab nav end
@@ -4445,7 +4493,7 @@ Blog section end
     .newsletter-section {
         .newsletter-form {
             .form-control {
-                padding: 10px 20px 10px 165px;
+                padding: 10px 20px 10px 140px;
             }
 
             .subscribe-btn {
@@ -4457,14 +4505,6 @@ Blog section end
         .newsletter-thumbs img {
             right: auto;
             left: 5%;
-        }
-    }
-
-    @media (max-width: 1199px) {
-        .newsletter-section {
-            .newsletter-thumbs img {
-                left: 2%;
-            }
         }
     }
 
@@ -4580,7 +4620,8 @@ Copyright end
     padding-bottom: 100px;
     background-image: var(--gradient-bg);
     z-index: 1;
-    &::after{
+
+    &::after {
         content: "";
         position: absolute;
         background-image: url(../img/banner/waves_white-15.png);
@@ -4617,7 +4658,7 @@ Copyright end
 
 @media(max-width: 991px) {
     .banner-area {
-        padding-top: 100px;
+        padding-top: 140px;
         padding-bottom: 50px;
     }
 
@@ -4765,6 +4806,7 @@ Map section end
         border-radius: 5px;
         z-index: 1;
         position: relative;
+
         .logo-area {
             margin-bottom: 20px;
             display: inline-flex;
@@ -4785,7 +4827,7 @@ Map section end
                 width: 16px;
             }
         }
-      
+
     }
 
 }
@@ -5102,14 +5144,25 @@ Login Signup end
     }
 
     .blog-quote-box {
+        border-left: none;
+        border-right: 2px solid var(--primary-color);
         padding: 25px 40px 20px 20px;
 
         .icon-area {
-            left: auto;
-            right: -20px;
+            left: 20px;
+            right: auto;
 
             i {
                 transform: rotateY(180deg);
+            }
+        }
+
+        .title {
+            padding: 10px 30px 0 0;
+
+            &::after {
+                left: auto;
+                right: 0;
             }
         }
     }
