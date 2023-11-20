@@ -196,29 +196,52 @@ preloader section start
   justify-content: center;
   align-items: center;
 }
-#preloader .preloader-image {
-  width: 100px;
-  animation: flipInY both 2s infinite;
+#preloader .load {
+  padding: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) rotate(135deg);
+  width: 50px;
+  height: 50px;
 }
-@keyframes flipInY {
-  0% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    animation-timing-function: ease-in;
-    opacity: 0;
+#preloader .load :first-child {
+  background: #19A68C;
+  animation-delay: -1.5s;
+}
+#preloader .load :nth-child(2) {
+  background: #F63D3A;
+  animation-delay: -1s;
+}
+#preloader .load :nth-child(3) {
+  background: #FDA543;
+  animation-delay: -0.5s;
+}
+#preloader .load :last-child {
+  background: #193B48;
+}
+#preloader .load hr {
+  border: 0;
+  margin: 0;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 2s ease infinite;
+}
+@keyframes spin {
+  0%, 100% {
+    transform: translateX(200%);
   }
-  40% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    animation-timing-function: ease-in;
+  25% {
+    transform: translateY(200%);
   }
-  60% {
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    opacity: 1;
+  50% {
+    transform: translateX(0);
   }
-  80% {
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-  }
-  100% {
-    transform: perspective(400px);
+  75% {
+    transform: translateY(0);
   }
 }
 
@@ -3368,7 +3391,7 @@ Faq end
 .testimonial-section .testimonial-box {
   position: relative;
   padding: 20px;
-  background: var(--bg-color2);
+  background: var(--white);
   border-radius: 4px;
   transition: var(--transition);
   border: 1px solid var(--border-color1);
@@ -3920,7 +3943,7 @@ Login Signup end
 .blog-quote-box {
   margin: 20px 0;
   position: relative;
-  background-color: var(--bg-color2);
+  background-color: var(--white);
   box-shadow: var(--shadow1);
   padding: 25px;
   border-left: 2px solid var(--primary-color);

@@ -1,9 +1,8 @@
-
 // Preloader area
 const preloader = document.getElementById("preloader");
-function preloderFunction() {
+const preloaderFunction = () => {
     preloader.style.display = "none";
-}
+};
 // toggleSideMenu start
 const toggleSideMenu = () => {
     document.body.classList.toggle("toggle-sidebar");

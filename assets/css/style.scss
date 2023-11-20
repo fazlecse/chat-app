@@ -228,41 +228,64 @@ preloader section start
     justify-content: center;
     align-items: center;
 
-    .preloader-image {
-        width: 100px;
-        animation: flipInY both 2s infinite;
+    .load {
+        padding: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: center center;
+        transform: translate(-50%, -50%) rotate(135deg);
+        width: 50px;
+        height: 50px;
+
+        :first-child {
+            background: #19A68C;
+            animation-delay: -1.5s
+        }
+
+        :nth-child(2) {
+            background: #F63D3A;
+            animation-delay: -1s
+        }
+
+        :nth-child(3) {
+            background: #FDA543;
+            animation-delay: -0.5s
+        }
+
+        :last-child {
+            background: #193B48
+        }
+
+        hr {
+            border: 0;
+            margin: 0;
+            width: 40%;
+            height: 40%;
+            position: absolute;
+            border-radius: 50%;
+            animation: spin 2s ease infinite;
+        }
+
     }
 
-    @keyframes flipInY {
-        0% {
-            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-            opacity: 0;
-        }
+    @keyframes spin {
 
-        40% {
-            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-            -webkit-animation-timing-function: ease-in;
-            animation-timing-function: ease-in;
-        }
-
-        60% {
-            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-            opacity: 1;
-        }
-
-        80% {
-            -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-        }
-
+        0%,
         100% {
-            -webkit-transform: perspective(400px);
-            transform: perspective(400px);
+            transform: translateX(200%)
+        }
+
+        25% {
+            transform: translateY(200%)
+        }
+
+        50% {
+            transform: translateX(0)
+        }
+
+        75% {
+            transform: translateY(0)
         }
     }
 
@@ -4154,7 +4177,7 @@ Faq end
     .testimonial-box {
         position: relative;
         padding: 20px;
-        background: var(--bg-color2);
+        background: var(--white);
         border-radius: 4px;
         transition: var(--transition);
         border: 1px solid var(--border-color1);
@@ -4928,7 +4951,7 @@ Login Signup end
 .blog-quote-box {
     margin: 20px 0;
     position: relative;
-    background-color: var(--bg-color2);
+    background-color: var(--white);
     box-shadow: var(--shadow1);
     padding: 25px;
     border-left: 2px solid var(--primary-color);
