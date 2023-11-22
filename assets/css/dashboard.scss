@@ -1,7 +1,7 @@
 /*----------------------------------------------
 Typography 
 ----------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=Montserrat:wght@500;600;700;800&display=swap');
 
 
 :root {
@@ -16,6 +16,7 @@ Typography
     --soft-blue: #C1BFFD;
     --grayish-violet: #f5f4f7;
     --btn-hover-bg: linear-gradient(90deg, hsl(var(--secondary)) 0%, hsl(var(--base)) 100%);
+    --delete-btn-hover-bg: #dc4077;
     --soft-green: #ccf888;
     --soft-red: #d82a68;
     --lime-gray: #d0d0d0;
@@ -540,13 +541,13 @@ intlTelInput end
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b {
     border-color: var(--body-color) transparent transparent transparent;
-    border-width: 5px 6px 0 6px;
+    border-width: 4px 4px 0 4px;
     margin-left: -10px;
 }
 
 .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
     border-color: transparent transparent var(--primary-color) transparent;
-    border-width: 0 6px 5px 6px;
+    border-width: 0 4px 4px 4px;
 }
 
 .select2-container .select2-dropdown {
@@ -558,7 +559,7 @@ intlTelInput end
     border-radius: 5px;
     border: 1px solid var(--border-color2);
     outline: 0;
-    background-color: var(--bg-color1);
+    background-color: var(--white);
     color: var(--heading-color);
 }
 
@@ -850,6 +851,28 @@ Reset section end
 /*----------------------------------------------
 Reusable style section start
 ----------------------------------------------*/
+.link {
+    text-decoration: underline;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+// Link end
+// Input box start
+.input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .cmn-btn3 {
+        height: 30px;
+        position: absolute;
+        right: 8px;
+        padding: 10px;
+    }
+}
+
+// Input box end
 // Cmn searchbar section start
 .search-bar {
     width: 100%;
@@ -1133,6 +1156,25 @@ Offcanvas section end
 
     &.show {
         box-shadow: 0 3px 6px -2px rgba(140, 152, 164, .25);
+    }
+}
+.delete-btn{
+    position: relative;
+    background-color: var(--soft-red);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: var(--transition);
+    font-size: 16px;
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    text-transform: capitalize;
+
+    &:hover {
+        color: var(--white);
+        background-color: var(--delete-btn-hover-bg);
     }
 }
 
@@ -2164,7 +2206,7 @@ Chat section start
             }
 
             &:nth-child(odd) {
-                background-color: var(--gray);
+                background-color: var(--bg-color1);
             }
 
             &.active,
@@ -2916,9 +2958,11 @@ Header section start
 
         .notification-item {
             border-radius: 3px;
+
             &:hover {
                 background-color: var(--primary-color-opacity-low);
             }
+
             a {
                 display: flex;
                 align-items: center;
@@ -2943,7 +2987,7 @@ Header section start
                 color: #919191;
             }
 
-           
+
         }
     }
 
@@ -3313,7 +3357,7 @@ Main section start
     padding: 30px;
     transition: all 0.3s;
     background-color: var(--white);
-    min-height: calc(100vh - 125px);
+    min-height: calc(100vh - 132px);
 
 
     .pagetitle {
@@ -3329,7 +3373,7 @@ Main section start
 // Main responsive start
 @media (max-width: 991px) {
     #main {
-        min-height: calc(100vh - 185px);
+        min-height: calc(100vh - 192px);
     }
 }
 
@@ -3361,10 +3405,14 @@ Main section start
 
     .card-header {
         padding: 20px;
-        background-color: var(--bg-color2);
+        background-color: var(--white);
         border-bottom: 1px solid var(--border-color1);
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+
+        .card-title {
+            margin-bottom: 0;
+        }
     }
 
     .card-body {
@@ -3818,4 +3866,73 @@ Paybill section start
 // Paybill form confirm sectio end
 /*----------------------------------------------
 Paybill section end
+----------------------------------------------*/
+
+/*----------------------------------------------
+Chat widget section start
+----------------------------------------------*/
+.chat-widget-section {
+    .select2 {
+        width: auto !important;
+        flex-grow: 1;
+    }
+    .title {
+        flex-grow: 1;
+        border: 1px solid var(--border-color1);
+        padding: 10px;
+        height: 45px;
+        border-radius: 5px;
+    }
+
+    .cmn-btn {
+        height: 45px;
+    }
+
+    h6 {
+        font-family: var(--heading-font);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .card {
+        border-radius: 5px;
+
+        .card-body {
+            padding: 10px;
+
+            .status {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    .textarea-box {
+        position: relative;
+
+        &:hover .btn-area {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-color-opacity-low2);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+    }
+}
+
+/*----------------------------------------------
+Chat widget section end
 ----------------------------------------------*/
