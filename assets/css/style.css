@@ -2728,7 +2728,7 @@ user nav Profile start
   border-radius: 50%;
 }
 .profile-box .user-dropdown {
-  background: var(--bg-color2);
+  background: var(--white);
   box-shadow: var(--shadow2);
   width: 200px;
   overflow: hidden;
@@ -4253,4 +4253,98 @@ Policy section end
 }
 /*----------------------------------------------
 Error end
+----------------------------------------------*/
+/*----------------------------------------------
+Chat widget section start
+----------------------------------------------*/
+.chat-widget-section {
+  text-align: center;
+}
+.chat-widget-section .chat-button {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9;
+}
+.chat-widget-section .message-box {
+  position: fixed;
+  right: 10px;
+  bottom: 90px;
+  background-color: var(--white);
+  max-width: 350px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: var(--shadow1);
+  z-index: 9;
+  border: 1px solid var(--border-color1);
+}
+.chat-widget-section .message-box-body {
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+}
+.chat-widget-section .message-box-body .section-header {
+  border-radius: 5px 5px 0 0;
+  padding: 16px;
+  background-color: var(--primary-color);
+}
+.chat-widget-section .message-box-body .section-header::after {
+  content: "";
+  height: 40px;
+  background-color: var(--primary-color);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+.chat-widget-section .message-box-body p {
+  font-size: 18px;
+  color: var(--white);
+}
+.chat-widget-section .section-bottom {
+  background-color: var(--bg-color1);
+  padding: 0 16px 16px;
+  flex-grow: 1;
+}
+.chat-widget-section .section-bottom .btn-area {
+  margin-top: 10px;
+  padding: 16px;
+  background-color: var(--white);
+  border-radius: 5px;
+}
+.chat-widget-section .section-title {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.message-box-footer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+}
+.message-box-footer .chat-brand {
+  padding: 5px;
+  color: var(--heading-color);
+}
+.message-box-footer .chat-brand:hover {
+  background-color: var(--bg-color1);
+  border-radius: 15px;
+}
+.message-box-footer img {
+  width: 20px;
+}
+
+/*----------------------------------------------
+Chat widget section end
 ----------------------------------------------*/
