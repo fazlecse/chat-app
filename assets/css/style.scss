@@ -5644,6 +5644,7 @@ Chat widget section start
 
 .widget-chat-box {
     padding: 16px;
+
     .message-bubble {
         display: flex;
         gap: 10px;
@@ -5668,8 +5669,10 @@ Chat widget section start
             max-width: 85%;
         }
     }
-    .message-bubble-right{
+
+    .message-bubble-right {
         flex-direction: row-reverse;
+
         .bubble-content {
             border-radius: 15px;
             border-top-right-radius: 0;
@@ -5679,7 +5682,59 @@ Chat widget section start
     }
 }
 
+// Rtl chat widget section start
+.rtl {
+    .chat-widget-section {
+        .message-box-header {
+            .header-btn {
+                i {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .chat-start-box{
+            border-left: none;
+            border-right: 4px solid var(--primary-color);
+        }
+    }
 
+    .widget-chat-box {
+
+        .message-bubble {
+            .bubble-content {
+                border-top-right-radius: 0;
+                border-top-left-radius: 15px;
+            }
+        }
+
+        .message-bubble-right {
+            .bubble-content {
+                border-top-right-radius: 15px;
+                border-top-left-radius: 0;
+            }
+        }
+    }
+
+    .message-box-footer {
+        .chat-input-container {
+            .react-btn-area {
+                &:hover {
+                    .hover-btn {
+                        right: -100%;
+                    }
+                }
+
+                .hover-btn {
+                    right: 100%;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+}
+
+// Rtl chat widget section end
 /*----------------------------------------------
 Chat widget section end
 ----------------------------------------------*/

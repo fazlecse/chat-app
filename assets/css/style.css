@@ -4503,6 +4503,29 @@ Chat widget section start
   color: var(--white);
 }
 
+.rtl .chat-widget-section .message-box-header .header-btn i {
+  transform: rotate(180deg);
+}
+.rtl .chat-widget-section .chat-start-box {
+  border-left: none;
+  border-right: 4px solid var(--primary-color);
+}
+.rtl .widget-chat-box .message-bubble .bubble-content {
+  border-top-right-radius: 0;
+  border-top-left-radius: 15px;
+}
+.rtl .widget-chat-box .message-bubble-right .bubble-content {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 0;
+}
+.rtl .message-box-footer .chat-input-container .react-btn-area:hover .hover-btn {
+  right: -100%;
+}
+.rtl .message-box-footer .chat-input-container .react-btn-area .hover-btn {
+  right: 100%;
+  left: auto;
+}
+
 /*----------------------------------------------
 Chat widget section end
 ----------------------------------------------*/
