@@ -9,11 +9,6 @@ const toggleSideMenu = () => {
 };
 // toggleSideMenu end
 
-
-
-
-
-
 // input file preview
 const previewImage = (id) => {
     document.getElementById(id).src = URL.createObjectURL(event.target.files[0]);

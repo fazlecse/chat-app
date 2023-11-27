@@ -8,9 +8,12 @@ const preloaderFunction = () => {
 const toggleSideMenu = () => {
     document.body.classList.toggle("toggle-sidebar");
 };
-
-
 // toggleSideMenu end
+document.getElementById('chat-button').addEventListener('click', () => {
+    console.log("clicked");
+    document.getElementById('chat-widget-section').classList.toggle('open')
+    
+})
 
 // add bg to nav
 window.addEventListener("scroll", function () {
