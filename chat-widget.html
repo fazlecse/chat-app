@@ -461,7 +461,8 @@
                                             <input type="color" class="form-control form-control-color"
                                                 id="exampleColorInput" value="#563d7c" title="Choose your color">
                                             <span class="flex-grow-1">#33852f</span>
-                                            <a href="" class="cmn-btn3">advanced</a>
+                                            <a href="" class="cmn-btn3" data-bs-toggle="modal"
+                                                data-bs-target="#staticBackdrop">advanced</a>
                                         </div>
                                     </div>
                                 </div>
@@ -814,7 +815,9 @@
                                                 </div>
                                                 <a href="" class="cmn-btn3">configure</a>
                                             </div>
-                                            <p>By default, the widget will be shown to all visitors. To show or hide the widget for visitors from specific countries, enable this functionality and specify the countries.</p>
+                                            <p>By default, the widget will be shown to all visitors. To show or hide the
+                                                widget for visitors from specific countries, enable this functionality
+                                                and specify the countries.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -834,12 +837,14 @@
                                                 </div>
                                                 <a href="" class="cmn-btn3">configure</a>
                                             </div>
-                                            <p>By default, the widget will be shown to all visitors. To show or hide the widget for visitors from specific platforms, enable this functionality and specify the platforms.</p>
+                                            <p>By default, the widget will be shown to all visitors. To show or hide the
+                                                widget for visitors from specific platforms, enable this functionality
+                                                and specify the platforms.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="col-12">
@@ -918,18 +923,446 @@
     <!-- Offcanvas sidebar end -->
 
     <!-- Modal section start -->
-    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+    <div class="modal" id="staticBackdrop" data-bs-backdrop="static" tabindex="-1" aria-labelledby="staticBackdropLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title" id="staticBackdropLabel">Modal title</h1>
+                    <h1 class="modal-title" id="staticBackdropLabel">WIDGET APPEARANCE</h1>
                     <button type="button" class="cmn-btn-close" data-bs-dismiss="modal" aria-label="Close">
                         <i class="fa-light fa-xmark"></i>
                     </button>
                 </div>
                 <div class="modal-body">
-                    Modal body
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="widget-settings">
+                                <div class="row g-3">
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Desktop Widget</h6>
+                                        <div class="card p-3">
+                                            <div class="">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault1">
+                                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                                <div class="widget-round">
+                                                                    <i class="fa-regular fa-comment-text"></i>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault2">
+                                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                                <div class="widget-rectangle">
+                                                                    online
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card p-3">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="Width" class="form-label">Width</label>
+                                                                <input type="text" class="form-control" id="Width"
+                                                                    value="350" aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div>
+                                                                <label for="Height"
+                                                                    class="form-label">Height</label>
+                                                                <input type="text" class="form-control" id="Height"
+                                                                    value="520" aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card p-3">
+                                                    <label class="form-label">Desktop Widget Position</label>
+                                                    <div class="widget-pos-selector-area">
+                                                        <div class="row g-2">
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="top-right">
+                                                                    <label class="form-check-label" for="top-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="top-left">
+                                                                    <label class="form-check-label" for="top-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="center-right">
+                                                                    <label class="form-check-label"
+                                                                        for="center-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="center-left">
+                                                                    <label class="form-check-label"
+                                                                        for="center-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="bottom-right"
+                                                                        checked>
+                                                                    <label class="form-check-label"
+                                                                        for="bottom-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="bottom-left">
+                                                                    <label class="form-check-label"
+                                                                        for="bottom-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="card p-3">
+                                            <label class="form-label">Attention Grabber</label>
+                                            <div class="row align-items-center">
+                                                <div class="col-md-6">
+                                                    <div class="row align-items-center">
+                                                        <div class="col-6">
+                                                            <div class="form-check form-switch">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    role="switch" id="flexSwitchCheckChecked"
+                                                                    checked>
+                                                                <label class="form-check-label"
+                                                                    for="flexSwitchCheckChecked">
+                                                                    Enabled</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <a href="" class="cmn-btn w-100">gallery</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-check form-switch">
+                                                        <input class="form-check-input" type="checkbox"
+                                                            role="switch" id="flexSwitchCheckChecked2">
+                                                        <label class="form-check-label"
+                                                            for="flexSwitchCheckChecked2">
+                                                            Match widget with bubble theme.</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Mobile Widget</h6>
+                                        <div class="card p-3">
+                                            <div class="">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault3">
+                                                            <label class="form-check-label" for="flexRadioDefault3">
+                                                                <div class="widget-round">
+                                                                    <i class="fa-regular fa-comment-text"></i>
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="flexRadioDefault" id="flexRadioDefault4">
+                                                            <label class="form-check-label" for="flexRadioDefault4">
+                                                                <div class="widget-rectangle">
+                                                                    <i class="fa-regular fa-comment-text"></i> chat
+                                                                </div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="card p-3">
+                                                    <label class="form-label">Desktop Widget Position</label>
+                                                    <div class="widget-pos-selector-area">
+                                                        <div class="row g-2">
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-top-right">
+                                                                    <label class="form-check-label"
+                                                                        for="m-top-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-top-left">
+                                                                    <label class="form-check-label"
+                                                                        for="m-top-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-center-right">
+                                                                    <label class="form-check-label"
+                                                                        for="m-center-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-center-left">
+                                                                    <label class="form-check-label"
+                                                                        for="m-center-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-bottom-right"
+                                                                        checked>
+                                                                    <label class="form-check-label"
+                                                                        for="m-bottom-right">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-2 widget-pos-selector">
+                                                                <div class="form-check ps-0">
+                                                                    <input class="form-check-input" type="radio"
+                                                                        name="flexRadioDefault" id="m-bottom-left">
+                                                                    <label class="form-check-label"
+                                                                        for="m-bottom-left">
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                        <div class="dot"></div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <h6 class="mb-2">Widget Colors</h6>
+                                        <div class="card p-3">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="exampleColorInput" class="form-label">Color
+                                                        picker</label>
+                                                    <input type="color" class="form-control form-control-color"
+                                                        id="exampleColorInput" value="#563d7c"
+                                                        title="Choose your color">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="widget-preview">
+                                <h6 class="mb-2">Desktop widget preview</h6>
+                                <div class="card">
+                                    <div class="card-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="cmn-btn" data-bs-dismiss="modal">Close</button>
@@ -939,6 +1372,7 @@
         </div>
     </div>
     <!-- Modal section end -->
+
 
 
 

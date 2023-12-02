@@ -898,6 +898,7 @@ body::-webkit-scrollbar-thumb {
 
 // Modal section end
 
+
 // Cmn-btn-start
 
 // Cmn btn close start
@@ -1973,7 +1974,7 @@ hr.divider:after {
     overflow-y: auto;
     border-radius: 5px;
     padding: 8px;
-    background: var(--bg-color2);
+    background: var(--white);
     border: 1px solid var(--border-color1);
     box-shadow: var(--shadow3);
 
@@ -1986,6 +1987,8 @@ hr.divider:after {
         margin-bottom: 5px;
         text-transform: capitalize;
         font-weight: 500;
+        display: flex;
+        gap: 5px;
 
         &:hover {
             background: var(--primary-color);
@@ -2228,15 +2231,6 @@ hr.divider:after {
     }
 }
 
-// Countdown section end
-// Country flags container section start
-// .country-flags-modal-section {
-//     .modal-body {
-//         max-height: 400px;
-//         overflow: auto;
-//         min-height: 200px;
-//     }
-// }
 
 .country-flags-container {
     .item {
@@ -2261,6 +2255,7 @@ hr.divider:after {
 }
 
 // Country flags container section end
+
 // Category modal section start
 .category-modal-section {
     .category-list {
@@ -5388,7 +5383,7 @@ Chat widget section start
             bottom: -600px;
         }
 
-        .chat-button {
+        .chat-widget-button {
             .thumbs-area {
                 display: block;
             }
@@ -5399,7 +5394,7 @@ Chat widget section start
         }
     }
 
-    .chat-button {
+    .chat-widget-button {
         height: 60px;
         width: 60px;
         border-radius: 50%;
@@ -5692,7 +5687,8 @@ Chat widget section start
                 }
             }
         }
-        .chat-start-box{
+
+        .chat-start-box {
             border-left: none;
             border-right: 4px solid var(--primary-color);
         }

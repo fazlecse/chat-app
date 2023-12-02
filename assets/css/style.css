@@ -1659,7 +1659,7 @@ hr.divider:after {
   overflow-y: auto;
   border-radius: 5px;
   padding: 8px;
-  background: var(--bg-color2);
+  background: var(--white);
   border: 1px solid var(--border-color1);
   box-shadow: var(--shadow3);
 }
@@ -1672,6 +1672,8 @@ hr.divider:after {
   margin-bottom: 5px;
   text-transform: capitalize;
   font-weight: 500;
+  display: flex;
+  gap: 5px;
 }
 .dropdown-menu .dropdown-item:hover {
   background: var(--primary-color);
@@ -4269,13 +4271,13 @@ Chat widget section start
 .chat-widget-section.open .message-box {
   bottom: -600px;
 }
-.chat-widget-section.open .chat-button .thumbs-area {
+.chat-widget-section.open .chat-widget-button .thumbs-area {
   display: block;
 }
-.chat-widget-section.open .chat-button .icon-area {
+.chat-widget-section.open .chat-widget-button .icon-area {
   display: none;
 }
-.chat-widget-section .chat-button {
+.chat-widget-section .chat-widget-button {
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -4290,14 +4292,14 @@ Chat widget section start
   bottom: 20px;
   z-index: 9999;
 }
-.chat-widget-section .chat-button .thumbs-area img {
+.chat-widget-section .chat-widget-button .thumbs-area img {
   transition: var(--transition);
   border-radius: 50%;
   width: 60px;
   height: 60px;
   border: 1px solid var(--border-color1);
 }
-.chat-widget-section .chat-button .thumbs-area {
+.chat-widget-section .chat-widget-button .thumbs-area {
   display: none;
 }
 .chat-widget-section .message-box {

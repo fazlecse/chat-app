@@ -985,7 +985,7 @@
 
     <!-- Chat widget section start -->
     <div id="chat-widget-section" class="chat-widget-section">
-        <button id="chat-button" type="button" class="chat-button">
+        <button id="chat-widget-button" type="button" class="chat-widget-button">
             <div class="icon-area">
                 <i class="fa-regular fa-xmark"></i>
             </div>
@@ -1168,9 +1168,31 @@
                     </div>
                 </div>
 
-                <button type="button" class="header-btn">
-                    <i class="fa-regular fa-bars-staggered"></i>
-                </button>
+
+                <div class="dropdown">
+                    <button type="button" class="header-btn" data-bs-toggle="dropdown">
+                        <i class="fa-regular fa-bars-staggered"></i>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-user-pen"></i>Change Name </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-envelope"></i> Email transcript
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-bell"></i> Sound On </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-arrow-up-right-from-square"></i>
+                                Pop out widget </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-circle-xmark"></i> End this chat
+                                session </a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-message"></i> Add Chat to your
+                                website </a>
+                        </li>
+
+                    </ul>
+                </div>
             </div>
             <div class="message-box-body">
                 <div class="widget-chat-box">
@@ -1213,7 +1235,9 @@
                             <img src="./assets/img/Person/10.jpg" alt="">
                         </div>
                         <div class="bubble-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam. Velit doloremque sunt, excepturi placeat quae quas eligendi commodi nemo obcaecati iure ipsum ipsa. Officia?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laborum dicta fugiat
+                            molestiae voluptatum ipsam. Velit doloremque sunt, excepturi placeat quae quas eligendi
+                            commodi nemo obcaecati iure ipsum ipsa. Officia?
                         </div>
                     </div>
                     <div class="message-bubble">
@@ -1221,7 +1245,9 @@
                             <img src="./assets/img/Person/1.jpg" alt="">
                         </div>
                         <div class="bubble-content">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laborum dicta fugiat molestiae voluptatum ipsam. Velit doloremque sunt, excepturi placeat quae quas eligendi commodi nemo obcaecati iure ipsum ipsa. Officia?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, laborum dicta fugiat
+                            molestiae voluptatum ipsam. Velit doloremque sunt, excepturi placeat quae quas eligendi
+                            commodi nemo obcaecati iure ipsum ipsa. Officia?
                         </div>
                     </div>
                 </div>
@@ -1260,81 +1286,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- <div class="message-box">
-            <div class="message-box-header rounded-top">
-                <div class="d-flex gap-2">
-                    <button type="button" class="header-btn">
-                        <i class="fa-regular fa-angle-left"></i>
-                    </button>
-                    <div class="profile">
-                        <div class="thumbs-area">
-                            <img src="./assets/img/Person/10.jpg" alt="">
-                        </div>
-                        <div class="content-area">
-                            <h6 class="mb-0">apollo</h6>
-                            <small>Customer Care</small>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="button" class="header-btn">
-                    <i class="fa-regular fa-bars-staggered"></i>
-                </button>
-            </div>
-            <div class="message-box-body">
-
-                <div class="section-header mb-0">
-                    <div class="chat-brand">
-                        <img src="./assets/img/logo/favicon.png" alt="">
-                    </div>
-                    <h4 class="section-title">welcome to TalkWave</h4>
-                    <p>Search our Knowledge Base or start a chat. We're here to help you 24 x 7</p>
-                </div>
-                <div class="section-bottom">
-                    <div class="search-box">
-                        <input type="text" class="form-control" placeholder="Search here..." />
-                        <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
-                    </div>
-                    <div class="btn-area">
-                        <a href="" class="cmn-btn w-100">new conversion</a>
-                    </div>
-                </div>
-            </div>
-            <div class="message-box-footer">
-                <div class="footer-brand-area">
-                    <a href="" class="footer-brand">
-                        <img src="./assets/img/logo/favicon.png" alt="" />
-                        <span>Add free <strong>TalkWave</strong> to your site</span>
-                    </a>
-                </div>
-                <div class="chat-input-container hidden">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-                    <div class="btn-area">
-                        <div class="react-btn-area">
-                            <button class="chat-input-btn react-btn">
-                                <i class="fa-light fa-thumbs-up"></i>
-                            </button>
-                            <div class="hover-btn">
-                                <button class="chat-input-btn">
-                                    <i class="fa-light fa-thumbs-down"></i>
-                                </button>
-                                <button class="chat-input-btn">
-                                    <i class="fa-light fa-thumbs-up"></i>
-                                </button>
-                            </div>
-
-                        </div>
-                        <button class="chat-input-btn">
-                            <i class="fa-light fa-paperclip"></i>
-                        </button>
-                        <button class="chat-input-btn">
-                            <i class="fa-light fa-face-smile"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 
     <!-- Chat widget section end -->

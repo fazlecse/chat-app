@@ -1158,7 +1158,8 @@ Offcanvas section end
         box-shadow: 0 3px 6px -2px rgba(140, 152, 164, .25);
     }
 }
-.delete-btn{
+
+.delete-btn {
     position: relative;
     background-color: var(--soft-red);
     padding: 8px 15px;
@@ -1906,6 +1907,29 @@ Cmn table end
 
 // Modal section end
 
+// Modal fullscreen section start
+.modal {
+    .modal-fullscreen {
+        .modal-content {
+            background-color: var(--bg-color1);
+        }
+    }
+}
+
+// Responsive modal fullscreen section start
+@media(min-width: 576px) {
+    .modal {
+        .modal-fullscreen {
+            .modal-content{
+
+                padding: 0 50px;
+            }
+        }
+    }
+}
+
+// Responsive modal fullscreen section end
+// Modal fullscreen section end
 /*----------------------------------------------
 Chat section start
 ----------------------------------------------*/
@@ -3876,6 +3900,7 @@ Chat widget section start
         width: auto !important;
         flex-grow: 1;
     }
+
     .title {
         flex-grow: 1;
         border: 1px solid var(--border-color1);
@@ -3935,4 +3960,144 @@ Chat widget section start
 
 /*----------------------------------------------
 Chat widget section end
+----------------------------------------------*/
+/*----------------------------------------------
+Wideget Section start
+----------------------------------------------*/
+.widget-settings {
+    .form-check {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+.widget-round {
+    width: 46px;
+    height: 46px;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+}
+
+.widget-rectangle {
+    width: 100%;
+    height: 46px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    gap: 5px;
+}
+
+.widget-settings {
+    .form-check-label {
+        width: 100%;
+    }
+}
+
+.widget-pos-selector-area {
+    .form-check-input {
+        display: none;
+    }
+
+    .widget-pos-selector:nth-child(1) {
+        .form-check-label {
+            .dot {
+                &:nth-child(3) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .widget-pos-selector:nth-child(2) {
+        .form-check-label {
+            .dot {
+                &:nth-child(1) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .widget-pos-selector:nth-child(3) {
+        .form-check-label {
+            .dot {
+                &:nth-child(6) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .widget-pos-selector:nth-child(4) {
+        .form-check-label {
+            .dot {
+                &:nth-child(4) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .widget-pos-selector:nth-child(5) {
+        .form-check-label {
+            .dot {
+                &:nth-child(9) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .widget-pos-selector:nth-child(6) {
+        .form-check-label {
+            .dot {
+                &:nth-child(7) {
+                    background-color: var(--primary-color);
+                }
+            }
+        }
+    }
+
+    .form-check-label {
+        width: 40px;
+        height: 40px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        border-radius: 3px;
+        padding: 1px;
+        border: 1px solid transparent;
+
+        &:hover {
+            border-color: var(--border-color2);
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border: 1px solid var(--border-color2);
+            margin: 1px;
+        }
+
+    }
+
+    .form-check-input:checked[type=radio]+.form-check-label {
+        border: 1px solid var(--primary-color);
+    }
+}
+
+/*----------------------------------------------
+Wideget Section end
 ----------------------------------------------*/
