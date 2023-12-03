@@ -343,6 +343,11 @@ textarea.form-control {
     color: var(--black);
 }
 
+.form-control-color {
+    width: 45px;
+    min-width: 45px;
+}
+
 .form-select {
     color: var(--body-color);
 }
@@ -383,13 +388,17 @@ textarea.form-control {
 
 .rtl .form-check {
     padding-right: 2.5em;
-
-    .form-check-input {
-        float: right;
-        margin-right: -2.5em;
-    }
+    padding-left: 0;
 }
 
+.rtl .form-check-input {
+    float: right;
+    margin-right: -2.5em;
+    margin-left: 0;
+}
+.rtl .form-check.ps-0{
+    padding-right: 0;
+}
 .form-select {
     background-image: url(../img/arrow/arrow-down-sign-to-navigate.png);
     background-repeat: no-repeat;
@@ -872,6 +881,15 @@ Reusable style section start
     }
 }
 
+// Rtl input box start
+.rtl {
+    .input-box .cmn-btn3 {
+        right: auto;
+        left: 8px;
+    }
+}
+
+// Rtl input box end
 // Input box end
 // Cmn searchbar section start
 .search-bar {
@@ -1920,7 +1938,7 @@ Cmn table end
 @media(min-width: 576px) {
     .modal {
         .modal-fullscreen {
-            .modal-content{
+            .modal-content {
 
                 padding: 0 50px;
             }
@@ -3309,6 +3327,8 @@ Sidebar start
 // Sidebar rtl start
 .rtl .sidebar {
     right: 0;
+    border-right: none;
+    border-left: 1px solid var(--border-color1);
 }
 
 .rtl .sidebar-nav {
@@ -4096,6 +4116,11 @@ Wideget Section start
     .form-check-input:checked[type=radio]+.form-check-label {
         border: 1px solid var(--primary-color);
     }
+}
+
+.widget-preview-section {
+    height: calc(100% - 30px);
+    min-height: 400px;
 }
 
 /*----------------------------------------------

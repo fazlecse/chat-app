@@ -4323,7 +4323,7 @@ Chat widget section start
   justify-content: space-between;
   gap: 5px;
   padding: 16px;
-  background: var(--gradient-bg);
+  background-color: var(--primary-color);
 }
 .chat-widget-section .message-box-header .header-btn {
   font-size: 18px;
@@ -4491,8 +4491,8 @@ Chat widget section start
   padding: 5px 10px;
   border-radius: 15px;
   border-top-left-radius: 0;
-  background: var(--white);
-  color: var(--heading-color);
+  background: var(--primary-color);
+  color: var(--white);
   max-width: 85%;
 }
 .widget-chat-box .message-bubble-right {
@@ -4501,8 +4501,8 @@ Chat widget section start
 .widget-chat-box .message-bubble-right .bubble-content {
   border-radius: 15px;
   border-top-right-radius: 0;
-  background: var(--gradient-bg);
-  color: var(--white);
+  background-color: var(--white);
+  color: var(--heading-color);
 }
 
 .rtl .chat-widget-section .message-box-header .header-btn i {
